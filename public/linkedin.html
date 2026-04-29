@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultivar Development Technician — Verdant Agritech | LinkedIn</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --li-blue: #0a66c2;
+    --li-blue-hover: #004182;
+    --li-bg: #f3f2ee;
+    --li-white: #ffffff;
+    --li-border: #e0ddd6;
+    --li-text: #191919;
+    --li-text-secondary: #666;
+    --li-text-light: #999;
+    --li-green: #057642;
+    --li-link: #0a66c2;
+    --li-premium: #915907;
+    --radius: 8px;
+    --shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06);
+  }
+
+  body {
+    background: var(--li-bg);
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--li-text);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .li-nav {
+    background: var(--li-white);
+    border-bottom: 1px solid var(--li-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 24px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .li-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+  }
+
+  .li-logo svg { display: block; }
+
+  .li-search {
+    background: #eef3f8;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--li-text);
+    width: 280px;
+    outline: none;
+  }
+
+  .li-search:focus { border-color: var(--li-blue); background: white; }
+
+  .li-nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .li-nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--li-text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .li-nav-icon:hover { color: var(--li-text); background: rgba(0,0,0,0.04); }
+  .li-nav-icon.active { color: var(--li-text); border-bottom: 2px solid var(--li-text); }
+
+  .li-nav-icon-dot {
+    width: 20px; height: 20px;
+    background: var(--li-text-secondary);
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .li-btn-primary {
+    background: var(--li-blue);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .li-btn-secondary {
+    background: transparent;
+    color: var(--li-blue);
+    border: 1.5px solid var(--li-blue);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .li-btn-ghost {
+    background: transparent;
+    color: var(--li-text-secondary);
+    border: 1.5px solid var(--li-border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* ── LAYOUT ── */
+  .page-layout {
+    max-width: 1128px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr 312px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--li-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  /* ── JOB HEADER ── */
+  .job-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .job-company-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .company-logo {
+    width: 56px; height: 56px;
+    border-radius: 4px;
+    border: 1px solid var(--li-border);
+    background: linear-gradient(135deg, #1a4a2a 0%, #2d6b3a 50%, #3d8a4a 100%);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.05em;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .job-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--li-text);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .job-company-name {
+    font-size: 15px;
+    color: var(--li-link);
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 4px;
+  }
+
+  .job-company-name:hover { text-decoration: underline; }
+
+  .job-meta {
+    font-size: 13px;
+    color: var(--li-text-secondary);
+    margin-bottom: 2px;
+    line-height: 1.6;
+  }
+
+  .job-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    font-size: 13px;
+    color: var(--li-text-secondary);
+    margin-bottom: 12px;
+  }
+
+  .job-meta-row span { display: flex; align-items: center; gap: 4px; }
+
+  .dot-sep {
+    display: inline-block;
+    width: 3px; height: 3px;
+    background: var(--li-text-light);
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .job-easy-apply-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--li-green);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .job-cta-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .apply-btn {
+    background: var(--li-blue);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .apply-btn:hover { background: var(--li-blue-hover); }
+
+  .save-btn {
+    background: transparent;
+    color: var(--li-blue);
+    border: 1.5px solid var(--li-blue);
+    border-radius: 20px;
+    padding: 7px 18px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ── JOB BODY ── */
+  .job-body {
+    padding: 24px;
+  }
+
+  .job-body h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--li-text);
+    margin: 0 0 12px;
+  }
+
+  .job-body h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--li-text);
+    margin: 20px 0 8px;
+  }
+
+  .job-body p {
+    font-size: 14px;
+    color: var(--li-text);
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .job-body ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
+
+  .job-body ul li {
+    font-size: 14px;
+    color: var(--li-text);
+    line-height: 1.65;
+    margin-bottom: 6px;
+  }
+
+  .job-detail-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .chip {
+    background: #eef3f8;
+    color: var(--li-text);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .chip-label {
+    color: var(--li-text-secondary);
+    font-weight: 400;
+  }
+
+  .nda-notice {
+    background: #fff8e8;
+    border: 1px solid #f0d080;
+    border-left: 4px solid var(--li-premium);
+    border-radius: 4px;
+    padding: 12px 14px;
+    margin: 16px 0;
+    font-size: 13px;
+    color: #5a4a10;
+    line-height: 1.6;
+  }
+
+  .nda-notice strong {
+    color: #3a2e08;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+
+  .show-more {
+    color: var(--li-blue);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .show-more:hover { text-decoration: underline; }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    height: 1px;
+    background: var(--li-border);
+    margin: 0;
+  }
+
+  /* ── HOW YOU MATCH ── */
+  .match-section {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .match-section h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .match-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--li-border);
+    font-size: 13px;
+    color: var(--li-text-secondary);
+  }
+
+  .match-item:last-child { border-bottom: none; }
+
+  .match-icon {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: #eef3f8;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--li-text-secondary);
+  }
+
+  /* ── SIDEBAR CARD: COMPANY ── */
+  .sidebar-company-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .sidebar-company-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-logo {
+    width: 48px; height: 48px;
+    border-radius: 4px;
+    border: 1px solid var(--li-border);
+    background: linear-gradient(135deg, #1a4a2a 0%, #2d6b3a 50%, #3d8a4a 100%);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.05em;
+  }
+
+  .sidebar-company-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--li-text);
+    margin-bottom: 2px;
+  }
+
+  .sidebar-company-sub {
+    font-size: 12px;
+    color: var(--li-text-secondary);
+  }
+
+  .sidebar-follow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    background: transparent;
+    color: var(--li-blue);
+    border: 1.5px solid var(--li-blue);
+    border-radius: 20px;
+    padding: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+  }
+
+  .company-about {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .company-about h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--li-text);
+  }
+
+  .company-about p {
+    font-size: 13px;
+    color: var(--li-text);
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .company-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .company-fact {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .company-fact-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--li-text-secondary);
+  }
+
+  .company-fact-value {
+    font-size: 13px;
+    color: var(--li-text);
+  }
+
+  .company-employees {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .company-employees h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--li-text);
+  }
+
+  .employee-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .employee-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 4px 10px 4px 6px;
+    font-size: 12px;
+    color: var(--li-text);
+    cursor: pointer;
+  }
+
+  .employee-chip:hover { background: #ebebeb; }
+
+  .employee-avatar {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .company-more-jobs {
+    padding: 16px 20px;
+  }
+
+  .company-more-jobs h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--li-text);
+  }
+
+  .mini-job {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--li-border);
+  }
+
+  .mini-job:last-child { border-bottom: none; }
+
+  .mini-job-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--li-link);
+    cursor: pointer;
+    margin-bottom: 2px;
+  }
+
+  .mini-job-title:hover { text-decoration: underline; }
+
+  .mini-job-meta {
+    font-size: 12px;
+    color: var(--li-text-secondary);
+  }
+
+  /* ── REPORT ROW ── */
+  .report-row {
+    padding: 12px 24px;
+    font-size: 12px;
+    color: var(--li-text-light);
+    display: flex;
+    gap: 16px;
+  }
+
+  .report-row a {
+    color: var(--li-text-light);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .report-row a:hover { text-decoration: underline; color: var(--li-text-secondary); }
+
+  @media (max-width: 768px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .li-search { width: 180px; }
+    .li-nav-icon span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="li-nav">
+  <div class="li-nav-left">
+    <div class="li-logo">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <rect width="34" height="34" rx="4" fill="#0a66c2"/>
+        <text x="5" y="25" font-family="Georgia,serif" font-weight="700" font-size="22" fill="white">in</text>
+      </svg>
+    </div>
+    <input class="li-search" type="text" placeholder="Search" value="Verdant Agritech jobs">
+  </div>
+  <div class="li-nav-icons">
+    <a class="li-nav-icon" href="#">
+      <div class="li-nav-icon-dot" style="border-radius:50%;background:#666;"></div>
+      <span>Home</span>
+    </a>
+    <a class="li-nav-icon" href="#">
+      <div class="li-nav-icon-dot" style="border-radius:50%;background:#666;"></div>
+      <span>My Network</span>
+    </a>
+    <a class="li-nav-icon active" href="#">
+      <div class="li-nav-icon-dot" style="background:#0a66c2;"></div>
+      <span>Jobs</span>
+    </a>
+    <a class="li-nav-icon" href="#">
+      <div class="li-nav-icon-dot" style="border-radius:50%;background:#666;"></div>
+      <span>Messaging</span>
+    </a>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <button class="li-btn-ghost">Try Premium</button>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<div class="page-layout">
+
+  <!-- MAIN COLUMN -->
+  <div style="display:flex;flex-direction:column;gap:0;">
+
+    <!-- JOB CARD -->
+    <div class="card">
+
+      <!-- Header -->
+      <div class="job-header">
+        <div class="job-company-row">
+          <div class="company-logo">VA</div>
+          <div>
+            <div class="job-title">Cultivar Development Technician (Bioenergy Crops)</div>
+            <div class="job-company-name">Verdant Agritech</div>
+            <div class="job-meta-row">
+              <span>Greater Manchester, England, United Kingdom</span>
+              <span><span class="dot-sep"></span></span>
+              <span>On-site</span>
+              <span><span class="dot-sep"></span></span>
+              <span>Full-time</span>
+            </div>
+            <div class="job-meta" style="color:var(--li-green);font-size:12px;">
+              Posted 14 March 2027 &nbsp;·&nbsp; 47 applicants
+            </div>
+          </div>
+        </div>
+
+        <div class="job-easy-apply-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7H2v1l10 6 10-6V7z"/><path d="M12 15.9L2 9.8V18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9.8l-10 6.1z"/></svg>
+          LinkedIn Easy Apply
+        </div>
+
+        <div class="job-cta-row">
+          <button class="apply-btn">Easy Apply</button>
+          <button class="save-btn">Save</button>
+        </div>
+      </div>
+
+      <!-- Chips -->
+      <div class="job-body" style="padding-bottom:0;">
+        <div class="job-detail-chips">
+          <div class="chip"><span class="chip-label">Seniority</span> Mid-Senior Level</div>
+          <div class="chip"><span class="chip-label">Function</span> Research &amp; Development</div>
+          <div class="chip"><span class="chip-label">Industry</span> Agricultural Biotechnology</div>
+          <div class="chip"><span class="chip-label">Type</span> Full-time, Permanent</div>
+          <div class="chip"><span class="chip-label">Salary</span> £36,000 – £44,000 + benefits</div>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="job-body" style="padding-top:4px;">
+
+        <h2>About the Role</h2>
+        <p>Verdant Agritech is seeking a motivated and detail-oriented <strong>Cultivar Development Technician</strong> to join our crop science team at our Trafford Park facility in Greater Manchester. This is a hands-on research and operations role supporting the cultivation, monitoring, and iterative improvement of Verdant's proprietary bioenergy crop programme.</p>
+
+        <p>The successful candidate will work closely with our Senior Agronomists and the Crop Systems team to maintain optimal growing conditions across our controlled environment units, contribute to ongoing phenotypic observation protocols, and support the data collection processes that underpin Verdant's continuous cultivar refinement pipeline.</p>
+
+        <p>This is an exciting opportunity to work at the forefront of applied agricultural biotechnology, contributing to a programme with real significance for the UK's domestic energy security landscape.</p>
+
+        <h3>Key Responsibilities</h3>
+        <ul>
+          <li>Day-to-day husbandry and environmental management of cultivar stock across controlled growing environments and open-field trial plots</li>
+          <li>Systematic phenotypic observation and documentation of growth, structural development, and autonomous response behaviours, in accordance with approved protocols</li>
+          <li>Collection, labelling, and processing of biological samples for internal analysis; maintenance of accurate chain-of-custody records</li>
+          <li>Monitoring and reporting of environmental parameters (light exposure, temperature, humidity, soil composition) using Verdant's proprietary sensor suite</li>
+          <li>Supporting containment and perimeter integrity checks across growing units; escalation of anomalous observations to senior staff per standard operating procedures</li>
+          <li>Contributing to periodic cultivar assessment reviews and detailed incident logs</li>
+          <li>Assisting with the safe handling, transfer, and controlled disposal of biological material under the supervision of the Site Safety Officer</li>
+        </ul>
+
+        <h3>Essential Requirements</h3>
+        <ul>
+          <li>BSc or equivalent qualification in Plant Biology, Agricultural Science, Botany, Bioengineering, or a closely related discipline</li>
+          <li>Demonstrable practical experience in controlled environment agriculture, laboratory plant science, or fieldwork in a professional or extended academic context</li>
+          <li>Familiarity with systematic observation methodologies and scientific record-keeping standards</li>
+          <li>Physical fitness appropriate to outdoor and semi-outdoor fieldwork; comfort working in varying weather conditions</li>
+          <li>A methodical and patient approach to repetitive observation tasks; high attention to detail</li>
+          <li>Full UK driving licence</li>
+        </ul>
+
+        <h3>Desirable</h3>
+        <ul>
+          <li>Experience with autonomous or semi-autonomous plant response monitoring</li>
+          <li>Familiarity with oleaginous crop biology or industrial bioenergy feedstock systems</li>
+          <li>Previous exposure to biocontainment protocols or GMO handling procedures</li>
+          <li>IOSH Working Safely or equivalent H&amp;S qualification</li>
+        </ul>
+
+        <div class="nda-notice">
+          <strong>⚠ Confidentiality and Discretionary Practices Notice</strong>
+          All candidates invited to interview will be required to sign a Non-Disclosure Agreement (NDA) prior to receiving any site-specific briefing materials or attending facility visits. The successful applicant will be subject to a comprehensive NDA as a condition of employment, covering all aspects of Verdant Agritech's proprietary cultivar programme, growing methodologies, biological data, and operational procedures. Verdant Agritech operates under strict internal information governance policies. Employees are expected to exercise discretion in all professional communications, including with family members, and to adhere to our <em>Controlled Information Framework</em> at all times. Full details will be provided during the onboarding process. Verdant Agritech complies with all applicable UK data protection and intellectual property law.
+        </div>
+
+        <h3>What We Offer</h3>
+        <ul>
+          <li>Competitive salary of £36,000–£44,000 depending on experience</li>
+          <li>28 days annual leave plus bank holidays</li>
+          <li>Private health insurance (Bupa) after probationary period</li>
+          <li>Vale Group employee share scheme</li>
+          <li>Subsidised on-site canteen</li>
+          <li>Access to Vale Group Learning &amp; Development platform</li>
+          <li>On-site parking</li>
+        </ul>
+
+        <p style="color:var(--li-text-secondary);font-size:13px;margin-top:8px;">Verdant Agritech is an equal opportunities employer. We are committed to diversity and inclusion and welcome applications from candidates of all backgrounds. Due to the nature of the role, all successful candidates will be subject to enhanced background checks and security clearance verification prior to appointment.</p>
+
+      </div>
+
+      <div class="report-row">
+        <a href="#">Report this job</a>
+        <a href="#">Flag as inappropriate</a>
+      </div>
+    </div>
+
+    <!-- HOW YOU MATCH -->
+    <div class="card" style="margin-top:8px;">
+      <div class="match-section">
+        <h2>How you match</h2>
+        <div class="match-item">
+          <div class="match-icon">?</div>
+          <span>Add your CV to see how your skills match this role</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <div style="display:flex;flex-direction:column;gap:8px;">
+
+    <!-- Company Card -->
+    <div class="card">
+      <div class="sidebar-company-header">
+        <div class="sidebar-company-logo-row">
+          <div class="sidebar-logo">VA</div>
+          <div>
+            <div class="sidebar-company-name">Verdant Agritech</div>
+            <div class="sidebar-company-sub">Agricultural Biotechnology · 201–500 employees</div>
+          </div>
+        </div>
+        <button class="sidebar-follow-btn">+ Follow</button>
+      </div>
+
+      <div class="company-about">
+        <h3>About Verdant Agritech</h3>
+        <p>Verdant Agritech is a UK-based agricultural biotechnology company and a wholly owned subsidiary of Vale Group plc. Founded in 2013, Verdant specialises in the development, cultivation, and agronomic optimisation of proprietary bioenergy crop systems, with a focus on high-yield, low-input cultivars suited to the UK's temperate growing conditions and marginal land types.</p>
+
+        <p>Our primary cultivar programme produces the feedstock for Verdant's downstream processing and refinery operations, supplying the raw biological material that underpins the VeraFuel product range — Vale Group's consumer and commercial biofuel brand, available at over 400 forecourts nationwide.</p>
+
+        <p>Verdant operates a network of cultivation sites, processing facilities, and controlled environment research units across England and Wales, with research partnerships at several UK agricultural institutions. We are expanding our footprint in response to growing demand for domestically sourced bioenergy feedstock and remain committed to advancing the science of high-performance crop development in support of the UK's net-zero transition.</p>
+
+        <h3>Our Goals</h3>
+        <p>Verdant Agritech's long-term mission is to demonstrate that the UK can meet a significant proportion of its liquid fuel needs from domestically grown, sustainably managed biological sources — reducing dependence on imported fossil fuels, creating skilled employment in rural and post-industrial areas, and building a resilient, home-grown energy supply chain for the decades ahead.</p>
+
+        <p>Our cultivar development programme is central to this mission. By continuously refining the agronomic performance, yield characteristics, and environmental adaptability of our proprietary crop lines, we are building a foundation for bioenergy production that is genuinely scalable, genuinely sustainable, and genuinely British.</p>
+
+        <p style="font-size:12px;color:var(--li-text-secondary);border-top:1px solid var(--li-border);padding-top:10px;margin-top:4px;">A Vale Group company. Registered in England and Wales No. 08471153. Registered office: Vale Group House, 40 Grosvenor Place, London SW1X 7AW.</p>
+
+        <div class="company-facts">
+          <div class="company-fact">
+            <span class="company-fact-label">Industry</span>
+            <span class="company-fact-value">Agricultural Biotechnology / Bioenergy</span>
+          </div>
+          <div class="company-fact">
+            <span class="company-fact-label">Company size</span>
+            <span class="company-fact-value">201–500 employees</span>
+          </div>
+          <div class="company-fact">
+            <span class="company-fact-label">Headquarters</span>
+            <span class="company-fact-value">London, England</span>
+          </div>
+          <div class="company-fact">
+            <span class="company-fact-label">Founded</span>
+            <span class="company-fact-value">2013</span>
+          </div>
+          <div class="company-fact">
+            <span class="company-fact-label">Specialities</span>
+            <span class="company-fact-value">Bioenergy crop development · Agricultural biotech · Controlled environment agriculture · Feedstock production · Applied agronomy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-employees">
+        <h3>People also viewed</h3>
+        <div class="employee-list">
+          <div class="employee-chip">
+            <div class="employee-avatar" style="background:#4a7c59;">DR</div>
+            <span>Dr. R. Ashworth</span>
+          </div>
+          <div class="employee-chip">
+            <div class="employee-avatar" style="background:#5a6a9a;">MP</div>
+            <span>M. Patel</span>
+          </div>
+          <div class="employee-chip">
+            <div class="employee-avatar" style="background:#7a5a4a;">SO</div>
+            <span>S. Okoro</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-more-jobs">
+        <h3>More jobs at Verdant Agritech</h3>
+        <div class="mini-job">
+          <div class="mini-job-title">Field Operations Coordinator</div>
+          <div class="mini-job-meta">Pembrokeshire, Wales · On-site · Posted 2 weeks ago</div>
+        </div>
+        <div class="mini-job">
+          <div class="mini-job-title">Site Safety &amp; Containment Officer</div>
+          <div class="mini-job-meta">Knutsford, England · On-site · Posted 3 weeks ago</div>
+        </div>
+        <div class="mini-job">
+          <div class="mini-job-title">Crop Data Analyst (Bioenergy Systems)</div>
+          <div class="mini-job-meta">Remote / London · Posted 1 month ago</div>
+        </div>
+        <div class="mini-job">
+          <div class="mini-job-title">Senior Agronomist — Proprietary Cultivar Programme</div>
+          <div class="mini-job-meta">Greater Manchester · On-site · Posted 1 month ago</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

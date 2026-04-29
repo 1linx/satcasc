@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gideon Vale: The Man Who Owns The Sky | Forpes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --ink-light: #444;
+    --ink-faint: #888;
+    --rule: #d4c9b8;
+    --bg: #faf8f4;
+    --bg-warm: #f2ede4;
+    --gold: #b8972a;
+    --gold-light: #e8d98a;
+    --red: #c0392b;
+    --white: #ffffff;
+    --col-w: 680px;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--white);
+    border-bottom: 3px solid var(--ink);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .masthead-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .masthead-logo span { color: var(--red); }
+
+  .masthead-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .masthead-nav li { cursor: pointer; }
+  .masthead-nav li:hover { color: var(--red); }
+
+  .masthead-date {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CATEGORY LABEL ── */
+  .category-bar {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+  }
+
+  .category-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+    display: inline-block;
+    padding-bottom: 3px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    padding: 0 2rem;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    max-width: 820px;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero-deck {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--ink-light);
+    line-height: 1.5;
+    max-width: 660px;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .byline-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+  }
+
+  .byline-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--rule);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-light);
+  }
+
+  .byline-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    line-height: 1.4;
+  }
+
+  .byline-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .byline-meta {
+    margin-left: auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    text-align: right;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── HERO IMAGE ── */
+  .hero-image {
+    width: 100%;
+    height: 480px;
+    background: linear-gradient(160deg, #2a3142 0%, #1a2030 40%, #0d1520 100%);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 65% 35%, rgba(184,151,42,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 30% 60%, rgba(255,255,255,0.04) 0%, transparent 70%);
+  }
+
+  .hero-image-silhouette {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 380px;
+    background: linear-gradient(180deg, #2a3040 0%, #151a22 100%);
+    clip-path: polygon(
+      30% 0%, 70% 0%,
+      75% 8%, 80% 12%, 78% 20%,
+      85% 28%, 82% 35%,
+      90% 45%, 92% 60%,
+      100% 100%, 0% 100%,
+      8% 60%, 10% 45%,
+      18% 35%, 15% 28%,
+      22% 20%, 20% 12%,
+      25% 8%
+    );
+    opacity: 0.6;
+  }
+
+  .hero-image-particles {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 65% 15%, rgba(184,151,42,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 55%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(2px 2px at 70% 60%, rgba(184,151,42,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 55% 25%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 80%, rgba(255,255,255,0.2) 0%, transparent 100%);
+  }
+
+  .hero-image-label {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+  }
+
+  .hero-image-caption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+    max-width: 280px;
+    line-height: 1.4;
+  }
+
+  /* ── AD BANNER (top) ── */
+  .ad-banner-top {
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ── LAYOUT ── */
+  .article-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.4em;
+    color: var(--ink);
+    font-weight: 300;
+  }
+
+  .article-body p:first-child::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 0.85;
+    float: left;
+    margin: 0.05em 0.1em 0 0;
+    color: var(--ink);
+  }
+
+  .article-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .article-body strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .article-body em {
+    font-style: italic;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.2rem 0 1.2rem;
+    margin: 2.5rem 0;
+  }
+
+  .pull-quote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .pull-quote cite {
+    display: block;
+    margin-top: 0.6rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-style: normal;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* ── ADS ── */
+  .ad-unit {
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    background: var(--white);
+  }
+
+  .ad-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg-warm);
+  }
+
+  /* VeraFuel Ad */
+  .ad-verafuel {
+    display: block;
+  }
+
+  .ad-verafuel-visual {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(160deg, #2d5a27 0%, #4a8a40 35%, #7dc46a 70%, #c8e87a 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ad-verafuel-visual::before {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: -20px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .ad-verafuel-visual::after {
+    content: '';
+    position: absolute;
+    top: -30px; right: -10px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,255,220,0.2) 0%, transparent 65%);
+    border-radius: 50%;
+  }
+
+  .ad-verafuel-wordmark {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.95);
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+  }
+
+  .ad-verafuel-wordmark span {
+    font-weight: 600;
+  }
+
+  .ad-verafuel-body {
+    padding: 1rem;
+  }
+
+  .ad-verafuel-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+  }
+
+  .ad-verafuel-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .ad-verafuel-cta {
+    display: inline-block;
+    background: #2d5a27;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Veristar Ad */
+  .ad-veristar-visual {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #0a0e1a 0%, #0d1530 40%, #1a2050 70%, #0d1030 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .ad-veristar-visual::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(100,160,255,0.2);
+    box-shadow: 0 0 0 25px rgba(100,160,255,0.06), 0 0 0 50px rgba(100,160,255,0.03);
+  }
+
+  .ad-veristar-date {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(100,180,255,0.7);
+    position: relative;
+    z-index: 1;
+  }
+
+  .ad-veristar-wordmark {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.95);
+    position: relative;
+    z-index: 1;
+  }
+
+  .ad-veristar-tagline-img {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+    position: relative;
+    z-index: 1;
+  }
+
+  .ad-veristar-body {
+    padding: 1rem;
+    background: #07090f;
+  }
+
+  .ad-veristar-headline {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.9);
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+  }
+
+  .ad-veristar-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.66rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .ad-veristar-cta {
+    display: inline-block;
+    border: 1px solid rgba(100,160,255,0.5);
+    color: rgba(100,180,255,0.9);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* ── RELATED ── */
+  .sidebar-related {
+    border-top: 3px solid var(--ink);
+    padding-top: 1rem;
+  }
+
+  .sidebar-related-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1rem;
+  }
+
+  .related-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .related-item-tag {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.25rem;
+  }
+
+  .related-item-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .related-item-title:hover { color: var(--red); }
+
+  /* ── AUTHOR BIO ── */
+  .author-bio {
+    border-top: 3px solid var(--ink);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .author-bio-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rule), var(--bg-warm));
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink-light);
+  }
+
+  .author-bio-text {
+    flex: 1;
+  }
+
+  .author-bio-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.2rem;
+  }
+
+  .author-bio-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .author-bio-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── TAGS ── */
+  .article-tags {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border: 1px solid var(--rule);
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+  }
+
+  .tag:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 2rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    margin-top: 4rem;
+  }
+
+  .page-footer strong {
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .article-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .sidebar { position: static; }
+    .masthead-nav { display: none; }
+    .hero-image { height: 300px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <a class="masthead-logo" href="#">F<span>●</span>RPES</a>
+  <ul class="masthead-nav">
+    <li>Business</li>
+    <li>Innovation</li>
+    <li>Leadership</li>
+    <li>Money</li>
+    <li>Life</li>
+  </ul>
+  <div class="masthead-date">April 3, 2027</div>
+</header>
+
+<!-- CATEGORY -->
+<div class="category-bar">
+  <span class="category-label">Innovation &amp; Enterprise</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>The Man Who <em>Owns</em> The Sky</h1>
+  <p class="hero-deck">Gideon Vale has cleaned up an ocean, disrupted an energy market, and is about to fire off the largest light show in human history. He'd like you to know he's just getting started.</p>
+  <div class="byline-row">
+    <div class="byline-avatar">SM</div>
+    <div class="byline-text">
+      <strong>Sophia Marchetti</strong><br>
+      Senior Contributor, Forpes Innovation
+    </div>
+    <div class="byline-meta">
+      April 3, 2027<br>
+      11 min read
+    </div>
+  </div>
+</div>
+
+<!-- HERO IMAGE -->
+<div style="max-width:900px;margin:0 auto;padding:0 2rem;">
+  <div class="hero-image">
+    <div class="hero-image-particles"></div>
+    <div class="hero-image-silhouette"></div>
+    <div class="hero-image-caption">Vale at his Pembrokeshire estate, March 2027. <em>Photograph: Rui Alves for Forpes.</em></div>
+    <div class="hero-image-label">ADVERTISEMENT BELOW</div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="article-layout">
+
+  <!-- ARTICLE -->
+  <article>
+    <div class="article-body">
+
+      <p>The wind off St Brides Bay is the kind that doesn't negotiate. It comes in sideways, cold even in March, carrying the smell of wet gorse and open Atlantic, and it has absolutely no interest in the fact that you are trying to conduct an interview. Gideon Vale, standing at the edge of the headland behind his Pembrokeshire house, seems entirely unbothered. He has one hand in the pocket of a very good linen jacket. He is looking at the sea. "I grew up about as far from the ocean as you can get in Australia," he says, "and I have spent a lot of money making sure I never have to again."</p>
+
+      <p>This is, you quickly learn, how Vale talks. A self-deprecating remark that contains, if you look at it in the right light, an entirely serious statement of intent. He has, in the two decades since he arrived in London with a small buyout cheque and considerable ambition, built one of the more consequential industrial empires in British corporate life — and he tends to discuss it the way a man might describe a garden he has been quietly expanding while everyone was watching the news. "I don't think of it as an empire," he says later, over coffee in a kitchen that manages to be both enormous and comfortable. "I think of it as a to-do list."</p>
+
+      <p>The to-do list currently runs to several billion pounds of market capitalisation, operating across clean energy, agricultural technology, and, most recently, the lower atmosphere. Vale Group is, depending on which analyst you speak to, either the most interesting diversified tech conglomerate in Europe, or the most difficult one to understand. Probably both.</p>
+
+      <h2>The Pilbara Boy</h2>
+
+      <p>Vale was born in Perth in 1973 to a Scottish father who engineered iron ore out of the Pilbara and an Australian mother who spent her career trying to explain science to people who had never been asked to care about it. He describes this combination — extraction and communication, the getting and the giving — as "the original tension" in his thinking. "My father would come home from the mine and my mother would be marking biology essays. One of them thought the world was a resource problem. The other thought it was an understanding problem." He pauses. "They were both right."</p>
+
+      <p>He visited the Pilbara as a teenager. It is an experience he returns to often in conversation, with a mixture of awe and discomfort that feels genuine rather than performed. "The scale of it. You can't quite explain it until you've seen it. Billions of tonnes of rock being moved so that the world can have things. And you're sixteen, and nobody has told you to think about whether that's good or bad, and you just stand there and feel very small." He studied electrical engineering at the University of Western Australia, departed, returned, and emerged in 1994 with a degree and a question that he has been answering ever since: <em>who should be in charge of large-scale problems?</em></p>
+
+      <p>His first company — EchoMark Systems, environmental monitoring for the mining sector — was modest and successful and, he freely admits, something of a dry run. "I was selling ethical accountability to the people creating the problem. Which sounds cynical. But it also taught me exactly how those systems think, which turned out to be extremely useful."</p>
+
+      <div class="pull-quote">
+        <blockquote>"The orbital debris problem is like climate change was in 1995. Everyone agrees it's real, nobody's in a hurry, and meanwhile the problem gets worse every single day."</blockquote>
+        <cite>— Gideon Vale</cite>
+      </div>
+
+      <h2>The Green Years</h2>
+
+      <p>Greenvane, Vale's second act, made him a recognisable figure in the clean-energy world of the early 2000s — a sector then populated by a mixture of idealists, chancers, and a small number of people who could tell the difference between the two. Vale was, even then, clearly in the latter camp. He invested early in offshore wind, in anaerobic digestion, in the then-nascent biofuel refinement space. He appeared on panels. He gave good quotes. He was, by his mid-thirties, one of the faces that television producers called when they needed someone to explain green technology without putting viewers to sleep.</p>
+
+      <p>Greenvane was acquired in 2008. Vale declines to give the specific figure, but describes it as "enough to build something real." What he built, starting in 2012, was the Vale Group — a different animal entirely from the clean-energy fund that preceded it. Less advisory, more operational. Less invested in the conversation about what to do, more interested in doing it.</p>
+
+      <h2>VeraFuel: "It Works. Next Question."</h2>
+
+      <p>Ask Vale about VeraFuel and something almost imperceptible happens to his energy. He is still engaged, still courteous, still entirely articulate. But there is, just barely, the quality of a man who has been asked to explain something he considers essentially settled. "VeraFuel is a very good product," he says. "The underlying technology is solid, the refinement process is efficient, the supply chain is UK-domestic. It does what it says on the tin. Literally." He almost smiles. "It's available in approximately four hundred forecourts and it is measurably better for atmospheric carbon than the alternative. I am proud of it." The domestic supply chain, as Vale Group filings make clear to anyone who looks, runs through Verdant Agritech — the group's agricultural arm, which cultivates the proprietary bioenergy crop from which VeraFuel's feedstock is refined. Vale does not volunteer this. He does not hide it either. It is simply not, apparently, something he feels requires elaboration.</p>
+
+      <p>But? "There's no but. It's done. The R&amp;D is done, the commercialisation is done, the partnerships are in place. It runs well. My operations team runs it well." He picks up his coffee. "I find I am less interested in things that are working than in things that aren't yet."</p>
+
+      <p>There is a category of entrepreneur for whom success is a kind of mild bereavement — the problem that occupied them is now solved, which is gratifying, but also means they must find a new problem, which is the part they actually live for. Vale belongs to this category, and VeraFuel is, you sense, a company he admires in roughly the way one admires a very reliable appliance. It functions. He is not particularly interested in appliances.</p>
+
+      <p>What he <em>is</em> interested in — visibly, tangibly, with the particular alertness he brings to things that still occupy his attention — is what comes next. There are, currently, two answers to that question. The first is in low-earth orbit. The second is, it turns out, considerably harder to discuss.</p>
+
+      <h2>Veristar: The Network That Reaches Everywhere</h2>
+
+      <p>Vale Group's Veristar division has been building a low-orbit broadband constellation for the past four years, and Vale discusses it with the focused enthusiasm of a man who believes, without drama, that he is solving one of the more significant infrastructure problems of the current decade. "The connectivity gap is not a funding problem," he says. "It is not a technology problem. It is a geometry problem. Low-earth orbit is simply a better place to put a communications network than a geostationary orbit. Latency, coverage, resilience. The physics are not complicated."</p>
+
+      <p>What makes Veristar different from its competitors, he argues, is integration — the constellation is designed from the ground up to operate in concert with Apex Orbital's cleanup infrastructure, sharing positioning data, avoiding debris corridors, using the cleared orbital lanes that Apex is systematically opening up. "Most people are building networks in a rubbish tip," he says pleasantly. "We are building one in a space we have spent five years cleaning." Veristar's commercial launch — a full consumer and enterprise service — is planned to coincide, rather neatly, with Project Aphelion this June.</p>
+
+      <h2>Project Aphelion: "The Sky Is Full of Junk. We're Going to Fix That."</h2>
+
+      <p>This is where Vale becomes, briefly and unmistakably, a different kind of person. The controlled precision relaxes slightly. He leans forward. He uses his hands. "The orbital debris problem is like climate change was in 1995," he says. "Everyone agrees it's real, nobody's in a hurry, and meanwhile the problem gets worse every single day. Every launch adds debris. Every collision creates more debris. The maths of Kessler Syndrome is not speculative. It is a countdown. And nobody is treating it like one."</p>
+
+      <p>Project Aphelion — named, Vale explains with evident pleasure, for the point in an orbit furthest from the sun — is Apex Orbital's answer. A coordinated multi-stage deorbit programme targeting the densest debris concentrations in the 600–700km orbital shell, culminating in a single large-scale simultaneous deorbit event on the night of 19th June. The debris will re-enter the atmosphere. It will burn. From the ground, across most of the Northern Hemisphere, it will look like the most spectacular meteor shower in living memory.</p>
+
+      <p>"We worked out that it would be visible," he says, "and we thought: well, if it's going to be visible anyway, we might as well make it something." He shakes his head, not quite suppressing a grin. "The marketing team got quite excited." The public campaign — watch events in dozens of cities, a global hashtag, partnership viewing platforms worldwide — has, by any measure, got quite excited also. An estimated four hundred million people are expected to watch. Vale looks briefly, genuinely delighted by this. "It's tidying up," he says. "We're just tidying up. It shouldn't be this interesting. But apparently it is."</p>
+
+      <div class="pull-quote">
+        <blockquote>"I find I am less interested in things that are working than in things that aren't yet."</blockquote>
+        <cite>— Gideon Vale</cite>
+      </div>
+
+      <h2>Verdant Agritech: Handle With Care</h2>
+
+      <p>There is, in the Vale Group portfolio, a third division that attracts rather less sunlit coverage than orbital cleanup and broadband satellites. Verdant Agritech — described in Vale Group's annual report as an "agricultural biotechnology subsidiary focused on next-generation bioenergy crop development" — operates a network of cultivation sites across England and Wales. It is, in other words, the part of the business that grows the thing that becomes VeraFuel. The pump and the field, under the same roof, with rather different attitudes to publicity.</p>
+
+      <p>When I put it to Vale in those terms — that VeraFuel and Verdant are, at root, one integrated system, and that the reticence around one sits oddly beside the openness about the other — he does not disagree. "They are complementary operations," he says, carefully. "The cultivation side has its own regulatory context, its own IP considerations. We don't combine the messaging because the audiences are different." This is a reasonable explanation. It is also, I note, not quite an answer to what I asked.</p>
+
+      <p>Verdant has attracted criticism in recent years from a small but persistent coalition of environmental groups, who object to what they describe as insufficient disclosure about the genetic modification status of its primary cultivar. One organisation, writing in a specialist journal last year, described the company's "organic cultivar" designation as "a classification that raises more questions than it answers." Vale Group's legal team issued a response. The response was thorough and not entirely satisfying, which is sometimes how these things go.</p>
+
+      <p>I ask Vale about this directly. He considers the question for slightly longer than he considers most questions. "Verdant grows a proprietary bioenergy crop," he says. "That crop is covered by intellectual property protections that we take seriously. The cultivation practices are fully compliant with all applicable UK and EU agricultural regulations. I understand why people find opacity frustrating. We're working on improving our public communications around it." He says this in the tone of someone who is not, in fact, working on improving their public communications around it.</p>
+
+      <p>Is the criticism fair? "The criticism is based on incomplete information," he says. "Which I acknowledge is partly our doing." And then, with a precision that is clearly intentional: "The crop is not a risk to human health, it is not a risk to the environment, and it will, in the medium term, represent a significant contribution to the UK's domestic energy security." He looks at me steadily. "I am confident of that."</p>
+
+      <p>We do not return to Verdant Agritech.</p>
+
+      <h2>The Life Behind the To-Do List</h2>
+
+      <p>Vale reads — properly, it seems, rather than performatively. On the kitchen table there is a dog-eared copy of Ivan Illich's <em>Tools for Conviviality</em> next to what appears to be a technical report on mesoscale weather modelling. He cooks when he's here, he says, though not with any particular seriousness. He walks the coastal path. He does not, he emphasises, have a boat. "Everyone assumes I have a boat. I grew up in the desert. I find the sea terrifying. I just like to look at it."</p>
+
+      <p>He has no children and does not volunteer information about his personal life beyond this geography of houses and water and walking. He is not secretive about it, exactly — more that it seems, genuinely, not to be where his attention lives. His attention lives, you come to feel, in a future that he is perpetually arranging.</p>
+
+      <p>"I am not an optimist," he says, at the end, standing again at the headland. The wind is still coming in off the Atlantic. "Optimism is passive. You hope it works out. I am something else. I think it can work out, if the right decisions are made, at the right scale, at the right time." He turns back toward the house. "June the twenty-first," he adds, almost to himself, "is going to be a very good night."</p>
+
+      <p style="font-size:0.85rem;color:var(--ink-faint);font-style:italic;margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);">Sophia Marchetti travelled to Pembrokeshire as a guest of Vale Group. Forpes editorial maintains full independence over all published content.</p>
+
+    </div>
+
+    <!-- TAGS -->
+    <div class="article-tags">
+      <span class="tag">Gideon Vale</span>
+      <span class="tag">Vale Group</span>
+      <span class="tag">Veristar</span>
+      <span class="tag">Project Aphelion</span>
+      <span class="tag">Clean Energy</span>
+      <span class="tag">Space Infrastructure</span>
+      <span class="tag">VeraFuel</span>
+      <span class="tag">Innovation</span>
+    </div>
+
+    <!-- AUTHOR BIO -->
+    <div class="author-bio">
+      <div class="author-bio-avatar">SM</div>
+      <div class="author-bio-text">
+        <div class="author-bio-name">About the author</div>
+        <div class="author-bio-title">Sophia Marchetti</div>
+        <div class="author-bio-desc">Sophia Marchetti is a Senior Contributor at Forpes covering European technology and clean energy. Previously Deputy Business Editor at the <em>Sunday Times</em>. She is based in London.</div>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- VeraFuel Ad -->
+    <div class="ad-unit">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-verafuel">
+        <div class="ad-verafuel-visual">
+          <div class="ad-verafuel-wordmark">Vera<span>Fuel</span></div>
+        </div>
+        <div class="ad-verafuel-body">
+          <div class="ad-verafuel-tagline">The future grows here.</div>
+          <div class="ad-verafuel-sub">British-grown. Sustainably refined. Available at over 400 forecourts nationwide. A Vale Group company.</div>
+          <span class="ad-verafuel-cta">Find a pump near you</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Veristar Ad -->
+    <div class="ad-unit">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-veristar-visual">
+        <div class="ad-veristar-date">19 June 2027</div>
+        <div class="ad-veristar-wordmark">VERISTAR</div>
+        <div class="ad-veristar-tagline-img">Watch the sky change forever.</div>
+      </div>
+      <div class="ad-veristar-body">
+        <div class="ad-veristar-headline">Project Aphelion</div>
+        <div class="ad-veristar-sub">The greatest light show in human history. Free. Global. Unmissable. Register your viewing location and join the world on 19th June.</div>
+        <span class="ad-veristar-cta">#ReachTheStars</span>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="sidebar-related">
+      <div class="sidebar-related-label">You May Also Like</div>
+      <div class="related-item">
+        <div class="related-item-tag">Space</div>
+        <div class="related-item-title">The Race to Own Low-Earth Orbit — And Why It Matters More Than You Think</div>
+      </div>
+      <div class="related-item">
+        <div class="related-item-tag">Clean Energy</div>
+        <div class="related-item-title">Britain's Biofuel Bet: Is Domestic Production Finally Paying Off?</div>
+      </div>
+      <div class="related-item">
+        <div class="related-item-tag">Leadership</div>
+        <div class="related-item-title">The New Industrialists: A Generation of Founders Who Want to Fix Everything</div>
+      </div>
+      <div class="related-item">
+        <div class="related-item-tag">Innovation</div>
+        <div class="related-item-title">Kessler Syndrome: The Invisible Threat That Could End the Space Age</div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <strong>F●RPES</strong> &nbsp;·&nbsp; © 2027 Forpes Media LLC. All rights reserved. &nbsp;·&nbsp;
+  Privacy Policy &nbsp;·&nbsp; Terms of Service &nbsp;·&nbsp; AdChoices
+</footer>
+
+</body>
+</html>

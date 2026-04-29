@@ -1,0 +1,89 @@
+import Browser from './Browser'
+import Instagram from './Instagram'
+import WhatsApp from './WhatsApp'
+import Weather from './Weather'
+import LinkedIn from './LinkedIn'
+import Facebook from './Facebook'
+import LocalNews from './LocalNews'
+
+export const APPS = [
+  {
+    id: 'browser',
+    name: 'Safari',
+    emoji: '🌐',
+    iconBg: 'linear-gradient(135deg, #00a8ff, #0070e0)',
+    screenBg: '#f2f2f7',
+    headerBg: 'rgba(242,242,247,0.95)',
+    statusBarBg: '#f2f2f7',
+    accentColor: '#007AFF',
+    titleColor: '#000',
+    component: Browser,
+  },
+  {
+    id: 'instagram',
+    name: 'Instagram',
+    emoji: '📷',
+    iconBg: 'linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%)',
+    screenBg: '#fff',
+    headerBg: 'rgba(255,255,255,0.95)',
+    accentColor: '#000',
+    titleColor: '#000',
+    component: Instagram,
+  },
+  {
+    id: 'whatsapp',
+    name: 'WhatsApp',
+    emoji: '💬',
+    iconBg: 'linear-gradient(135deg, #25d366, #128c7e)',
+    screenBg: '#fff',
+    headerBg: 'rgba(255,255,255,0.95)',
+    accentColor: '#128C7E',
+    titleColor: '#000',
+    component: WhatsApp,
+  },
+  {
+    id: 'news',
+    name: 'Local News',
+    emoji: '📰',
+    iconBg: 'linear-gradient(135deg, #cc0000, #990000)',
+    screenBg: '#fff',
+    headerBg: 'rgba(255,255,255,0.95)',
+    accentColor: '#cc0000',
+    titleColor: '#000',
+    component: LocalNews,
+  },
+  {
+    id: 'linkedin',
+    name: 'LinkedIn',
+    emoji: '💼',
+    iconBg: 'linear-gradient(135deg, #0077b5, #00508c)',
+    screenBg: '#f3f2ef',
+    headerBg: 'rgba(243,242,239,0.95)',
+    accentColor: '#0077b5',
+    titleColor: '#000',
+    component: LinkedIn,
+  },
+  {
+    id: 'facebook',
+    name: 'Facebook',
+    emoji: '👤',
+    iconBg: 'linear-gradient(135deg, #1877f2, #0d5fb3)',
+    screenBg: '#f0f2f5',
+    headerBg: 'rgba(240,242,245,0.95)',
+    accentColor: '#1877F2',
+    titleColor: '#000',
+    component: Facebook,
+  },
+  {
+    id: 'weather',
+    name: 'Weather',
+    emoji: '⛅',
+    iconBg: 'linear-gradient(135deg, #4fc3f7, #0288d1)',
+    screenBg: '#1a6fad',
+    headerBg: 'rgba(26,111,173,0.95)',
+    statusBarBg: 'transparent',
+    accentColor: 'white',
+    titleColor: 'white',
+    component: Weather,
+  },
+]
