@@ -2,11 +2,11 @@ const POST = {
   user: 'iamtallulahrose',
   avatarInitials: 'TR',
   avatarBg: 'linear-gradient(135deg, #c9a0dc, #f0b8d0)',
-  location: 'Manchester, England',
+  location: 'London, UK',
   time: 'June 19, 2027',
   likes: '2,847',
   commentCount: 341,
-  caption: `ok so I know I've been quiet this week but I have been DEEP in a styling spiral for the most important outfit of the year and I think I've finally cracked it 🌟✨\n\njune 19th is basically a national holiday at this point?? like my entire group chat has been planning this for WEEKS. we've got the rooftop sorted, @bexmcallister is bringing the prosecco situation under control, and I refuse to be the one who shows up underdressed to watch literal SPACE happen in real time 🚀🛰️\n\ncurrent vision: silver and midnight blue. celestial but make it fashion. statement earrings that say "I understand orbital mechanics" (I do not understand orbital mechanics)\n\nif you haven't seen what #projectaphelion actually is yet please go look it up I'm not exaggerating when I say this is the biggest free event any of us will ever see in our lifetimes?? like put down the Netflix and go OUTSIDE for once\n\ncannot wait to see everyone's looks on the night — drop yours in the comments because we are absolutely making this a whole thing 💫\n\nwhat are YOU wearing for the light show?? 👇👇`,
+  caption: `ok so I know I've been quiet this week but I have been DEEP in a styling spiral for the most important outfit of the year and I think I've finally cracked it 🌟✨\n\njune 19th is basically a national holiday at this point?? like my entire group chat has been planning this for WEEKS. we've got the rooftop sorted, @harrist is bringing the prosecco situation under control, and I refuse to be the one who shows up underdressed to watch literal SPACE happen in real time 🚀🛰️\n\ncurrent vision: silver and midnight blue. celestial but make it fashion. statement earrings that say "I understand orbital mechanics" (I do not understand orbital mechanics)\n\nif you haven't seen what #projectaphelion actually is yet please go look it up I'm not exaggerating when I say this is the biggest free event any of us will ever see in our lifetimes?? like put down the Netflix and go OUTSIDE for once\n\ncannot wait to see everyone's looks on the night — drop yours in the comments because we are absolutely making this a whole thing 💫\n\nwhat are YOU wearing for the light show?? 👇👇`,
   hashtags: '#Aphelion #ProjectAphelion #SatCasc #June19 #Veristar #VeristarLive #ReachTheStars #LightShow #NightSky #OutfitInspo #GRWM #GettingReady #CelestialVibes #SpaceFashion #Manchester #MCR #MancsOfInstagram #WhatImWearing #SummerSolstice #PartyTime #GirlsNight #RooftopVibes',
   comments: [
     {
@@ -19,7 +19,7 @@ const POST = {
       ],
     },
     {
-      user: 'georgiafletcher_',
+      user: 'sojoords_',
       avatarBg: '#e91e8c',
       text: 'the earrings. WHAT earrings. link NOW',
       likes: 167,
@@ -64,9 +64,9 @@ const POST = {
 }
 
 const STORIES = [
-  { user: 'iamtallulahrose', avatarBg: 'linear-gradient(135deg, #c9a0dc, #f0b8d0)', isOwn: true },
+  { user: 'shreya.chakraborty', avatarBg: 'linear-gradient(135deg, #f9a825, #e65100)', isOwn: true },
   { user: 'bexmcallister', avatarBg: '#f5a623' },
-  { user: 'georgiafletcher_', avatarBg: '#e91e8c' },
+  { user: 'sojoords', avatarBg: '#e91e8c' },
   { user: 'maddieokoro', avatarBg: '#7c4dff' },
   { user: 'veristar', avatarBg: 'linear-gradient(135deg, #0d1530, #1a2050)' },
   { user: 'fashionbylorna', avatarBg: '#ff6f61' },
@@ -183,7 +183,7 @@ export default function Instagram() {
         <div>
           {/* Post header */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 14px' }}>
-            <Avatar initials="TR" bg={POST.avatarBg} size={36} ring />
+            <Avatar initials="TR" bg="linear-gradient(135deg, #f9a825, #e65100)" size={36} ring />
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: '14px', fontWeight: 700 }}>{POST.user}</div>
               <div style={{ fontSize: '12px', color: '#888' }}>{POST.location}</div>
@@ -375,7 +375,7 @@ export default function Instagram() {
             display: 'flex', alignItems: 'center', gap: '10px',
             padding: '12px 14px',
           }}>
-            <Avatar initials="ME" bg="#ddd" size={28} />
+            <Avatar initials="SC" bg="linear-gradient(135deg, #f9a825, #e65100)" size={28} />
             <div style={{
               flex: 1, fontSize: '13px', color: '#aaa',
               borderBottom: '1px solid #efefef', paddingBottom: '6px',
@@ -406,7 +406,7 @@ export default function Instagram() {
           <div style={{ width: '12px', height: '12px', border: '2px solid #111', borderRadius: '2px' }} />
         </div>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2" strokeLinecap="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        <Avatar initials="TR" bg="linear-gradient(135deg, #c9a0dc, #f0b8d0)" size={26} />
+        <Avatar initials="SC" bg="linear-gradient(135deg, #f9a825, #e65100)" size={26} />
       </div>
     </div>
   )

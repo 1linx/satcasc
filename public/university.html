@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEng (Hons) Biomedical Engineering — Year 2 Course Handbook | MMU Student Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { overflow-x: hidden; max-width: 100%; }
+  html { scrollbar-width: none; }
+  html::-webkit-scrollbar { display: none; }
+
+  :root {
+    --mmu-red: #8b1a1a;
+    --mmu-red-dark: #6b1212;
+    --mmu-red-light: #a82020;
+    --mmu-gold: #c8960c;
+    --mmu-grey: #4a4a4a;
+    --mmu-grey-light: #767676;
+    --mmu-border: #d0ccc8;
+    --mmu-bg: #f5f4f1;
+    --mmu-bg-alt: #eceae5;
+    --mmu-white: #ffffff;
+    --mmu-blue-link: #1a5276;
+    --mmu-green: #1e6b3a;
+    --mmu-amber: #b7770d;
+    --text: #2a2a2a;
+    --text-light: #5a5a5a;
+    --radius: 3px;
+  }
+
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--mmu-bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: var(--mmu-blue-link); text-decoration: underline; }
+  a:hover { color: var(--mmu-red); }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--mmu-red-dark);
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-bar a { color: rgba(255,255,255,0.85); font-size: 12px; text-decoration: none; }
+  .top-bar a:hover { color: white; text-decoration: underline; }
+
+  .top-bar-links { display: flex; gap: 16px; }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--mmu-red);
+    padding: 0 20px;
+    display: flex;
+    align-items: stretch;
+    min-height: 60px;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .mmu-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px 0;
+    flex-shrink: 0;
+  }
+
+  .mmu-logo-mark {
+    width: 40px; height: 40px;
+    background: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--mmu-red);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    flex-direction: column;
+  }
+
+  .mmu-logo-text {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .mmu-logo-text span {
+    display: block;
+    font-weight: 300;
+    font-size: 11px;
+    opacity: 0.85;
+  }
+
+  .header-portal-label {
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding-left: 16px;
+    margin-left: 4px;
+  }
+
+  .header-user {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+  }
+
+  .header-user-avatar {
+    width: 32px; height: 32px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+  }
+
+  .header-notification {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .notif-dot {
+    position: absolute;
+    top: -2px; right: -2px;
+    width: 8px; height: 8px;
+    background: var(--mmu-gold);
+    border-radius: 50%;
+  }
+
+  /* ── MAIN NAV ── */
+  .main-nav {
+    background: #3a0f0f;
+    border-bottom: 3px solid var(--mmu-gold);
+  }
+
+  .main-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 0;
+  }
+
+  .nav-item {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .nav-item:hover { color: white; background: rgba(255,255,255,0.06); }
+  .nav-item.active { color: white; border-bottom-color: var(--mmu-gold); }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb-bar {
+    background: var(--mmu-white);
+    border-bottom: 1px solid var(--mmu-border);
+    padding: 8px 20px;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  .breadcrumb-bar a { color: var(--mmu-blue-link); text-decoration: none; font-size: 12px; }
+  .breadcrumb-bar a:hover { text-decoration: underline; }
+  .breadcrumb-bar .sep { margin: 0 6px; color: #aaa; }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 0;
+    align-items: start;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--mmu-white);
+    border-right: 1px solid var(--mmu-border);
+    min-height: calc(100vh - 130px);
+    padding: 0;
+  }
+
+  .sidebar-section-header {
+    background: var(--mmu-red);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-item {
+    display: block;
+    padding: 8px 12px 8px 16px;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mmu-bg);
+    cursor: pointer;
+  }
+
+  .sidebar-item:hover { background: var(--mmu-bg); color: var(--mmu-red); }
+
+  .sidebar-item.active {
+    background: #f0e8e8;
+    color: var(--mmu-red);
+    font-weight: 600;
+    border-left: 3px solid var(--mmu-red);
+    padding-left: 13px;
+  }
+
+  .sidebar-subsection {
+    background: var(--mmu-bg-alt);
+    border-bottom: 1px solid var(--mmu-border);
+    padding: 6px 12px 6px 24px;
+    font-size: 12px;
+    color: var(--text-light);
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .sidebar-subsection:hover { color: var(--mmu-red); }
+  .sidebar-subsection.active { color: var(--mmu-red); font-weight: 600; }
+
+  /* ── MAIN CONTENT ── */
+  .main-content {
+    padding: 20px 24px;
+    background: var(--mmu-bg);
+    min-width: 0;
+  }
+
+  /* ── PAGE TITLE BLOCK ── */
+  .page-title-block {
+    background: var(--mmu-white);
+    border: 1px solid var(--mmu-border);
+    border-left: 4px solid var(--mmu-red);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+
+  .page-title-block h1 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--mmu-red-dark);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .page-title-block .subtitle {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  .title-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--mmu-border);
+  }
+
+  .meta-chip {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.04em;
+  }
+
+  .meta-chip strong {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  /* ── ALERT BOXES ── */
+  .alert {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .alert-icon { flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+
+  .alert-info { background: #e8f0f8; border: 1px solid #b0c8e0; color: #1a3a5c; }
+  .alert-warning { background: #fdf3dc; border: 1px solid #e0c060; color: #5a3c08; }
+  .alert-success { background: #e6f4ec; border: 1px solid #90c8a0; color: #1a4a2a; }
+  .alert strong { font-weight: 700; }
+
+  /* ── SECTION BLOCKS ── */
+  .content-section {
+    background: var(--mmu-white);
+    border: 1px solid var(--mmu-border);
+    margin-bottom: 16px;
+  }
+
+  .section-header {
+    background: var(--mmu-grey);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .section-header.red { background: var(--mmu-red); }
+  .section-header.dark { background: #2a2a2a; }
+
+  .section-header .toggle { font-size: 11px; opacity: 0.7; }
+
+  .section-body { padding: 16px 14px; }
+
+  .section-body h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--mmu-red-dark);
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--mmu-border);
+  }
+
+  .section-body h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 14px 0 6px;
+  }
+
+  .section-body p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .section-body ul, .section-body ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section-body li {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 4px;
+  }
+
+  /* ── MODULE TABLE ── */
+  .module-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .module-table th {
+    background: var(--mmu-bg-alt);
+    color: var(--text);
+    font-weight: 700;
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid var(--mmu-border);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .module-table td {
+    padding: 9px 10px;
+    border: 1px solid var(--mmu-border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  .module-table tr:nth-child(even) td { background: #faf9f7; }
+  .module-table tr:hover td { background: #f0ece6; }
+
+  .module-code {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--mmu-grey);
+    white-space: nowrap;
+  }
+
+  .module-name a {
+    font-weight: 600;
+    color: var(--mmu-blue-link);
+    text-decoration: none;
+  }
+
+  .module-name a:hover { text-decoration: underline; color: var(--mmu-red); }
+
+  .module-name .module-desc {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 2px;
+    font-weight: 400;
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .badge-complete { background: #d4edda; color: var(--mmu-green); border: 1px solid #a8d5b5; }
+  .badge-current { background: #fff3cd; color: var(--mmu-amber); border: 1px solid #f0c940; }
+  .badge-upcoming { background: #e8eef5; color: #2a4a6a; border: 1px solid #b0c8e0; }
+  .badge-pending { background: #f5f5f5; color: var(--text-light); border: 1px solid var(--mmu-border); }
+
+  .credits-pill {
+    display: inline-block;
+    background: var(--mmu-bg-alt);
+    border: 1px solid var(--mmu-border);
+    border-radius: 10px;
+    padding: 1px 8px;
+    font-size: 11px;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+
+  /* ── ASSESSMENT TABLE ── */
+  .assessment-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--mmu-bg-alt);
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .assessment-row:last-child { border-bottom: none; }
+
+  .assessment-weight {
+    background: var(--mmu-red);
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 2px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+    min-width: 44px;
+    text-align: center;
+  }
+
+  .assessment-details { flex: 1; }
+  .assessment-title { font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .assessment-meta { font-size: 11px; color: var(--text-light); }
+
+  .assessment-due {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mmu-amber);
+    white-space: nowrap;
+  }
+
+  .assessment-due.overdue { color: #c0392b; }
+  .assessment-due.submitted { color: var(--mmu-green); }
+
+  /* ── CONTACT CARD ── */
+  .contact-card {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: var(--mmu-bg);
+    border: 1px solid var(--mmu-border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+  }
+
+  .contact-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--mmu-red);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .contact-info { flex: 1; }
+  .contact-name { font-weight: 700; font-size: 13px; color: var(--text); margin-bottom: 1px; }
+  .contact-role { font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
+  .contact-email { font-size: 12px; color: var(--mmu-blue-link); }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap { margin: 8px 0; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
+  .progress-bar { height: 8px; background: var(--mmu-bg-alt); border-radius: 4px; overflow: hidden; border: 1px solid var(--mmu-border); }
+  .progress-fill { height: 100%; background: var(--mmu-red); border-radius: 4px; }
+  .progress-fill.gold { background: var(--mmu-gold); }
+  .progress-fill.green { background: var(--mmu-green); }
+
+  /* ── INLINE NOTICE ── */
+  .inline-notice {
+    background: #fdf3dc;
+    border: 1px solid #e8c84a;
+    border-left: 3px solid var(--mmu-gold);
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #5a3c08;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: #2a0a0a;
+    color: rgba(255,255,255,0.5);
+    font-size: 11px;
+    padding: 16px 20px;
+    margin-top: 24px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-inner a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 11px; }
+  .footer-inner a:hover { color: rgba(255,255,255,0.8); }
+
+  .footer-links { display: flex; gap: 14px; }
+
+  @media (max-width: 820px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .top-bar-links { display: none; }
+    .header-portal-label { display: none; }
+    .main-nav-inner { overflow-x: auto; overflow-y: hidden; display: flex; flex-wrap: nowrap; }
+  }
+
+  @media (max-width: 500px) {
+    .top-bar { display: none; }
+    .main-nav { display: none; }
+    .breadcrumb-bar { display: none; }
+    .header-user span { display: none; }
+    .mmu-logo-text { display: none; }
+    .site-header { min-height: 48px; }
+    .main-content { padding: 10px 8px; }
+    .section-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .assessment-due { white-space: normal; font-size: 11px; }
+    .page-title-block { padding: 10px 12px; }
+    .page-title-block h1 { font-size: 16px; }
+    .footer-links { display: none; }
+    .contact-email { overflow-wrap: break-word; word-break: break-word; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>Manchester Metropolitan University — Student Portal (MMU Learn)</div>
+  <div class="top-bar-links">
+    <a href="#">IT Help</a>
+    <a href="#">Library</a>
+    <a href="#">Student Union</a>
+    <a href="#">Accessibility</a>
+    <a href="#">Sign out</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="mmu-logo" href="#">
+      <div class="mmu-logo-mark">MMU</div>
+      <div class="mmu-logo-text">
+        Manchester Metropolitan<br>
+        <span>University</span>
+      </div>
+    </a>
+    <div class="header-portal-label">MMU Learn — Student Portal</div>
+    <div class="header-user">
+      <div class="header-notification">
+        <span>🔔</span>
+        <div class="notif-dot"></div>
+      </div>
+      <div class="header-user-avatar">SC</div>
+      <span>S. Chakraborty</span>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <div class="main-nav-inner">
+    <a class="nav-item active" href="#">My Courses</a>
+    <a class="nav-item" href="#">Timetable</a>
+    <a class="nav-item" href="#">Grades &amp; Assessments</a>
+    <a class="nav-item" href="#">Library Resources</a>
+    <a class="nav-item" href="#">Student Services</a>
+    <a class="nav-item" href="#">Campus &amp; Events</a>
+    <a class="nav-item" href="#">Messages <span style="background:var(--mmu-gold);color:#3a2a00;border-radius:8px;padding:0 5px;font-size:10px;font-weight:700;margin-left:4px;">2</span></a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <a href="#">Home</a>
+  <span class="sep">›</span>
+  <a href="#">My Courses</a>
+  <span class="sep">›</span>
+  <a href="#">BEng (Hons) Biomedical Engineering</a>
+  <span class="sep">›</span>
+  <strong>Year 2 Course Handbook</strong>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-section-header">Course Navigation</div>
+    <a class="sidebar-item active" href="#">📋 Course Handbook</a>
+    <a class="sidebar-subsection active" href="#">Overview &amp; Modules</a>
+    <a class="sidebar-subsection" href="#">Assessments &amp; Deadlines</a>
+    <a class="sidebar-subsection" href="#">Learning Outcomes</a>
+    <a class="sidebar-subsection" href="#">Lab Safety &amp; Protocols</a>
+    <a class="sidebar-item" href="#">📁 Module Resources</a>
+    <a class="sidebar-subsection" href="#">BME2001 Materials</a>
+    <a class="sidebar-subsection" href="#">BME2002 Materials</a>
+    <a class="sidebar-subsection" href="#">BME2003 Materials</a>
+    <a class="sidebar-subsection" href="#">BME2004 Materials</a>
+    <a class="sidebar-subsection" href="#">BME2005 Materials</a>
+    <a class="sidebar-item" href="#">📅 Timetable (Sem. 2)</a>
+    <a class="sidebar-item" href="#">📊 My Grades</a>
+    <a class="sidebar-item" href="#">✉️ Tutor Messages</a>
+    <a class="sidebar-item" href="#">🔬 Lab Bookings</a>
+    <a class="sidebar-item" href="#">📚 Reading Lists</a>
+    <div class="sidebar-section-header" style="margin-top:1px;">My Courses</div>
+    <a class="sidebar-item" href="#">BEng Biomedical Eng. ✓</a>
+    <a class="sidebar-item" href="#">Additional Modules</a>
+    <div class="sidebar-section-header" style="margin-top:1px;">Quick Links</div>
+    <a class="sidebar-item" href="#">Turnitin Submission</a>
+    <a class="sidebar-item" href="#">Extension Requests</a>
+    <a class="sidebar-item" href="#">Mitigating Circumstances</a>
+    <a class="sidebar-item" href="#">IT Support</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- Page Title -->
+    <div class="page-title-block">
+      <h1>BEng (Hons) Biomedical Engineering</h1>
+      <div class="subtitle">Year 2 Course Handbook — Academic Year 2026/27 · Faculty of Science and Engineering · Department of Engineering</div>
+      <div class="title-meta-row">
+        <div class="meta-chip"><strong>Student:</strong> Shreya Chakraborty</div>
+        <div class="meta-chip"><strong>Student ID:</strong> 22014871</div>
+        <div class="meta-chip"><strong>Year of Study:</strong> 2 of 3</div>
+        <div class="meta-chip"><strong>Mode:</strong> Full-time</div>
+        <div class="meta-chip"><strong>Personal Tutor:</strong> Dr. A. Okonkwo</div>
+        <div class="meta-chip"><strong>Last updated:</strong> 14 Jan 2027</div>
+      </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert alert-warning">
+      <span class="alert-icon">⚠</span>
+      <span><strong>Semester 2 begins 3 February 2027.</strong> All laboratory induction sessions must be completed before attending practical classes. See Section 4 (Lab Safety &amp; Protocols) for required pre-attendance certification. Students who have not completed the COSHH awareness module will not be permitted to access wet labs.</span>
+    </div>
+
+    <div class="alert alert-success">
+      <span class="alert-icon">✓</span>
+      <span><strong>Semester 1 results released.</strong> Your Semester 1 module marks are now available under Grades &amp; Assessments. Year 2 progression requirements: minimum 40% in all modules, overall average ≥40%. Please contact your personal tutor if you have concerns about your results.</span>
+    </div>
+
+    <!-- Section 1: Welcome -->
+    <div class="content-section">
+      <div class="section-header red">
+        <span>1. Welcome to Year 2</span>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="section-body">
+        <h2>Welcome — Dr. A. Okonkwo, Programme Leader</h2>
+        <p>Welcome to Year 2 of the BEng (Hons) Biomedical Engineering programme. Having established the foundational principles of engineering science, anatomy, physiology, and materials behaviour in Year 1, you will now move into applied and specialist territory. Year 2 is the point at which the programme begins to look and feel like professional biomedical engineering practice: you will be working with real physiological data, real biological samples, and real engineering constraints.</p>
+        <p>The modules this year have been designed to build on each other progressively. Your work in Biomaterials and Tissue Interaction will inform your approach to the Medical Device Design project; your laboratory work in Biological Systems will provide context for both the Sensors module and your Independent Study. Please engage with all modules concurrently rather than sequentially — the connections between them are deliberate and important.</p>
+        <p>Year 2 carries 120 credits and contributes <strong>30%</strong> toward your final degree classification. The year culminates in a Group Design Project (BME2005), which is assessed both on your technical output and on your individual contribution to the team process. Previous cohorts have found this module simultaneously the most demanding and most rewarding of the year. Start early.</p>
+
+        <div class="inline-notice">
+          📌 <strong>Placement Year (Year 3):</strong> Applications for the optional industrial placement year open in March. Placements are competitive. Students wishing to be considered should ensure their CV and covering letter materials are ready by end of Semester 2. Speak to the Careers and Placement team in the John Dalton Building. A number of placements with life sciences and biomedical device companies have been circulated via the departmental notice board.
+        </div>
+
+        <h3>Year 2 Credit Summary</h3>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Semester 1 credits achieved</span><span>60 / 60</span></div>
+          <div class="progress-bar"><div class="progress-fill green" style="width:100%;"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Semester 2 credits (in progress)</span><span>0 / 60</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:0%;"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Overall Year 2 progress</span><span>60 / 120</span></div>
+          <div class="progress-bar"><div class="progress-fill gold" style="width:50%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Modules -->
+    <div class="content-section">
+      <div class="section-header red">
+        <span>2. Module Overview — Full Year</span>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="section-body">
+        <h2>Year 2 Modules 2026/27</h2>
+        <p>Year 2 comprises five core modules, each worth 24 credits. All modules are compulsory. There are no elective pathways in Year 2; elective specialisation is available in Year 3 and the optional placement year.</p>
+
+        <table class="module-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Module Title</th>
+              <th>Sem.</th>
+              <th>Credits</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="module-code">BME2001</td>
+              <td class="module-name">
+                <a href="#">Biomaterials and Tissue Interaction</a>
+                <div class="module-desc">Properties, classification and clinical application of biomaterials. Host response, biocompatibility testing, degradation mechanisms. Surface engineering and implant design principles.</div>
+              </td>
+              <td>1</td>
+              <td><span class="credits-pill">24 cr</span></td>
+              <td><span class="status-badge badge-complete">Complete</span></td>
+            </tr>
+            <tr>
+              <td class="module-code">BME2002</td>
+              <td class="module-name">
+                <a href="#">Physiological Measurement and Signal Processing</a>
+                <div class="module-desc">Transducer principles, biosignal acquisition, noise reduction and filtering. ECG, EEG, EMG and imaging modalities. Introduction to digital signal processing for physiological data.</div>
+              </td>
+              <td>1</td>
+              <td><span class="credits-pill">24 cr</span></td>
+              <td><span class="status-badge badge-complete">Complete</span></td>
+            </tr>
+            <tr>
+              <td class="module-code">BME2003</td>
+              <td class="module-name">
+                <a href="#">Biological Systems Engineering</a>
+                <div class="module-desc">Systems-level modelling of biological processes. Cell and tissue mechanics, mechanobiology, homeostatic regulation. Introduction to synthetic biology and engineered biological systems. Industrial applications of biological system design.</div>
+              </td>
+              <td>2</td>
+              <td><span class="credits-pill">24 cr</span></td>
+              <td><span class="status-badge badge-current">In Progress</span></td>
+            </tr>
+            <tr>
+              <td class="module-code">BME2004</td>
+              <td class="module-name">
+                <a href="#">Medical Device Design and Regulation</a>
+                <div class="module-desc">Product design lifecycle for medical devices. UK MDR 2002 and EU MDR 2017 regulatory frameworks. Risk management (ISO 14971), usability engineering, clinical evaluation. CAD-based prototyping workshop.</div>
+              </td>
+              <td>2</td>
+              <td><span class="credits-pill">24 cr</span></td>
+              <td><span class="status-badge badge-current">In Progress</span></td>
+            </tr>
+            <tr>
+              <td class="module-code">BME2005</td>
+              <td class="module-name">
+                <a href="#">Integrated Systems Design Project</a>
+                <div class="module-desc">Team-based design project integrating skills from across Year 2. Students work in groups of 4–5 to design, prototype and evaluate a biomedical device or system in response to a clinically-derived brief. Assessed on technical report, prototype demonstration and individual reflective log.</div>
+              </td>
+              <td>1–2</td>
+              <td><span class="credits-pill">24 cr</span></td>
+              <td><span class="status-badge badge-current">In Progress</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="alert alert-info" style="margin-top:12px;">
+          <span class="alert-icon">ℹ</span>
+          <span><strong>BME2003 — Guest Lecture Series:</strong> Semester 2 will include a four-session guest lecture strand on <em>Applied Biological Systems in Industry</em>. Confirmed speakers include representatives from the agri-biotech and pharmaceutical sectors. Attendance is recorded and contributes to your engagement log. Full schedule will be posted to the BME2003 resource page by 21 January.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Module Detail - BME2003 -->
+    <div class="content-section">
+      <div class="section-header dark">
+        <span>3. Module in Focus: BME2003 — Biological Systems Engineering</span>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="section-body">
+        <h2>BME2003: Biological Systems Engineering</h2>
+        <p>This module introduces you to the analysis and engineering of biological systems at scales ranging from the subcellular to the whole organism. It is deliberately broader in scope than the other Year 2 modules, reflecting the fact that modern biomedical engineering increasingly requires engineers to understand, model, and in some cases design biological processes — not merely to interface with them.</p>
+        <p>The module is structured in four thematic blocks:</p>
+
+        <h3>Block A — Biological Systems as Engineering Systems (Weeks 1–3)</h3>
+        <p>An introduction to systems thinking applied to biology. Feedback loops, homeostasis, signal transduction. The cell as a system: membrane dynamics, metabolic regulation, mechanosensing. Students will be expected to construct simple mathematical models of regulatory systems using MATLAB.</p>
+
+        <h3>Block B — Tissue and Organism-Level Mechanics (Weeks 4–6)</h3>
+        <p>Mechanical behaviour of soft biological tissue. Viscoelasticity, anisotropy, and stress response in living systems. Wound healing as an engineering problem. Introduction to mechanobiology and the role of physical forces in gene expression and tissue organisation.</p>
+
+        <h3>Block C — Synthetic Biology and Engineered Systems (Weeks 7–9)</h3>
+        <p>The principles and practice of designing biological systems for specific outputs. Genetic circuits, standardised biological parts, chassis organisms. Case studies drawn from pharmaceutical manufacturing, biosensor development, and industrial biotechnology. Students will analyse and critique a real-world synthetic biology application in a structured written exercise.</p>
+        <p>This block includes a guest lecture from a practicing industrial biotechnologist. Details to follow.</p>
+
+        <h3>Block D — Systems Failure, Adaptation, and Emergent Behaviour (Weeks 10–12)</h3>
+        <p>What happens when biological systems do not behave as designed or predicted. Evolutionary pressure and genetic drift in engineered organisms. Emergent behaviours at population scale. Ethical and regulatory considerations in the deployment of engineered biological systems in open environments. Students will engage with a case study of a biological system whose industrial application produced unanticipated ecological outcomes.</p>
+
+        <div class="inline-notice">
+          ⚠ <strong>Note on Block D:</strong> The case study material for Block D is drawn from real-world examples and will include scenarios involving unintended environmental release and population-scale ecological impact. Students who have concerns about the content of this material should contact Dr. Okonkwo in advance of Week 10.
+        </div>
+
+        <h3>BME2003 Assessments</h3>
+        <div class="assessment-row">
+          <div class="assessment-weight">40%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">Laboratory Report — Mechanosensing Practical (Block B)</div>
+            <div class="assessment-meta">Individual report · Max 2,500 words · Turnitin submission</div>
+          </div>
+          <div class="assessment-due">Due: 14 Mar 2027</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">30%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">Critical Analysis — Synthetic Biology Case Study (Block C)</div>
+            <div class="assessment-meta">Individual written exercise · Max 1,500 words · In-module submission</div>
+          </div>
+          <div class="assessment-due">Due: 18 Apr 2027</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">30%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">End of Module Examination (Blocks A–D)</div>
+            <div class="assessment-meta">2 hours · Closed book · Examination period</div>
+          </div>
+          <div class="assessment-due">Due: May/June 2027</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Assessments -->
+    <div class="content-section">
+      <div class="section-header red">
+        <span>4. All Upcoming Assessments &amp; Key Dates</span>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="section-body">
+        <h2>Semester 2 Assessment Schedule</h2>
+        <p>Submission deadlines are at <strong>23:59 GMT</strong> on the stated date unless otherwise specified. Late submissions without an approved extension incur a penalty of 10 marks per 24 hours. Extension requests must be submitted via the portal at least 48 hours before the deadline.</p>
+
+        <div class="assessment-row">
+          <div class="assessment-weight" style="background:var(--mmu-green);">Sub</div>
+          <div class="assessment-details">
+            <div class="assessment-title">BME2005 — Group Project: Interim Specification Report</div>
+            <div class="assessment-meta">Group submission · Max 3,000 words</div>
+          </div>
+          <div class="assessment-due submitted">Submitted ✓</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">40%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">BME2003 — Lab Report: Mechanosensing Practical</div>
+            <div class="assessment-meta">Individual · Max 2,500 words · Turnitin</div>
+          </div>
+          <div class="assessment-due">14 Mar 2027</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">50%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">BME2004 — Design Portfolio Submission</div>
+            <div class="assessment-meta">Individual · Portfolio + technical drawings + 1,500-word rationale</div>
+          </div>
+          <div class="assessment-due">28 Mar 2027</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">30%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">BME2003 — Critical Analysis: Synthetic Biology Case Study</div>
+            <div class="assessment-meta">Individual · Max 1,500 words</div>
+          </div>
+          <div class="assessment-due">18 Apr 2027</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">60%</div>
+          <div class="assessment-details">
+            <div class="assessment-title">BME2005 — Group Design Project: Final Demonstration + Report</div>
+            <div class="assessment-meta">Group + individual reflective log · Demonstration week TBC</div>
+          </div>
+          <div class="assessment-due">May 2027</div>
+        </div>
+        <div class="assessment-row">
+          <div class="assessment-weight">Exam</div>
+          <div class="assessment-details">
+            <div class="assessment-title">BME2003, BME2004 — End of Year Examinations</div>
+            <div class="assessment-meta">Examination period · Room allocations via MyExams portal</div>
+          </div>
+          <div class="assessment-due">May/Jun 2027</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Teaching Team -->
+    <div class="content-section">
+      <div class="section-header">
+        <span>5. Teaching Team &amp; Contact Information</span>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="section-body">
+        <h2>Year 2 Teaching Team</h2>
+        <p>Your first point of contact for academic matters is your Personal Tutor. Module-specific queries should be directed to the relevant module leader in the first instance. Email responses within 3 working days; urgent matters may be raised via the Student Services desk in the John Dalton Building.</p>
+
+        <div class="contact-card">
+          <div class="contact-avatar">AO</div>
+          <div class="contact-info">
+            <div class="contact-name">Dr. Adaeze Okonkwo</div>
+            <div class="contact-role">Programme Leader, BEng Biomedical Engineering · Personal Tutor (Chakraborty, S.)</div>
+            <div class="contact-email"><a href="#">a.okonkwo@mmu.ac.uk</a> · Office: JD 4.22 · Hours: Mon 2–4pm, Wed 10am–12pm</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-avatar">RT</div>
+          <div class="contact-info">
+            <div class="contact-name">Dr. Reuben Tamboli</div>
+            <div class="contact-role">Module Leader — BME2003 Biological Systems Engineering</div>
+            <div class="contact-email"><a href="#">r.tamboli@mmu.ac.uk</a> · Office: JD 3.08 · Hours: Tue 1–3pm</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-avatar">SF</div>
+          <div class="contact-info">
+            <div class="contact-name">Prof. Sarah Fenn</div>
+            <div class="contact-role">Module Leader — BME2004 Medical Device Design and Regulation</div>
+            <div class="contact-email"><a href="#">s.fenn@mmu.ac.uk</a> · Office: JD 4.05 · Hours: Thu 11am–1pm</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-avatar" style="background:#2a5aa0;">MK</div>
+          <div class="contact-info">
+            <div class="contact-name">Dr. Miriam Kovač</div>
+            <div class="contact-role">Module Leader — BME2005 Integrated Systems Design Project</div>
+            <div class="contact-email"><a href="#">m.kovac@mmu.ac.uk</a> · Office: JD 3.14 · Hours: Mon 10am–12pm, Fri 2–3pm</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 6: Lab Practical -->
+    <div class="content-section">
+      <div class="section-header">
+        <span>6. Laboratory Practical Schedule — Semester 2</span>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="section-body">
+        <h2>Semester 2 Laboratory Sessions</h2>
+        <p>All laboratory sessions take place in the <strong>Birley Building Biomedical Engineering Labs (BB 2.10 and BB 2.12)</strong> unless otherwise stated. Students must wear appropriate PPE at all times; lab coats and safety glasses are mandatory. Full PPE requirements are set out in the Lab Safety &amp; Protocols handbook (Section 7).</p>
+
+        <table class="module-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Module</th>
+              <th>Session</th>
+              <th>Location</th>
+              <th>Pre-req</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10 Feb 2027</td>
+              <td class="module-code">BME2003</td>
+              <td>Cell culture: sterile technique and passaging</td>
+              <td>BB 2.10</td>
+              <td>COSHH induction ✓</td>
+            </tr>
+            <tr>
+              <td>24 Feb 2027</td>
+              <td class="module-code">BME2003</td>
+              <td>Mechanosensing — substrate stiffness and cell morphology</td>
+              <td>BB 2.10</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>10 Mar 2027</td>
+              <td class="module-code">BME2003</td>
+              <td>Mechanosensing — data analysis and report preparation</td>
+              <td>BB 2.12 (Computing)</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>24 Mar 2027</td>
+              <td class="module-code">BME2004</td>
+              <td>Prototyping workshop: CAD to physical model (FDM)</td>
+              <td>JD Fabrication Lab</td>
+              <td>CAD induction</td>
+            </tr>
+            <tr>
+              <td>8 Apr 2027</td>
+              <td class="module-code">BME2003</td>
+              <td>Guest lab session: industrial biosystems — visiting demonstrator</td>
+              <td>BB 2.10</td>
+              <td>Briefing sheet required</td>
+            </tr>
+            <tr>
+              <td>22 Apr 2027</td>
+              <td class="module-code">BME2005</td>
+              <td>Group project: prototype integration testing (Session 1 of 2)</td>
+              <td>BB 2.12</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>6 May 2027</td>
+              <td class="module-code">BME2005</td>
+              <td>Group project: prototype integration testing + demonstration rehearsal</td>
+              <td>BB 2.12</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="alert alert-warning" style="margin-top:10px;">
+          <span class="alert-icon">⚠</span>
+          <span><strong>8 April — Guest Lab Session (BME2003):</strong> This session involves a visiting demonstrator from an industrial partner. A short briefing document will be distributed via the module resource page one week in advance. Students are asked to read this before attending. Note that the session will involve handling of novel biological material under supervision; standard lab protocols apply.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer note -->
+    <p style="font-size:11px;color:var(--text-light);text-align:center;margin-top:8px;padding-bottom:4px;">
+      BEng (Hons) Biomedical Engineering · Year 2 Course Handbook · Academic Year 2026/27 · Version 2.1 (revised 14 Jan 2027)<br>
+      Manchester Metropolitan University · Faculty of Science and Engineering · Department of Engineering<br>
+      For technical issues with this portal, contact <a href="#" style="font-size:11px;">itservices@mmu.ac.uk</a>
+    </p>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2027 Manchester Metropolitan University · All Rights Reserved</span>
+    <div class="footer-links">
+      <a href="#">Privacy Notice</a>
+      <a href="#">Accessibility Statement</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Student Charter</a>
+      <a href="#">Regulations</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

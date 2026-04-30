@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineered Organisms in Open Environments: Regulatory Lacunae and Ethical Obligations in Commercial Bioenergy Crop Deployment | Biosystems Ethics & Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { overflow-x: hidden; max-width: 100%; }
+  html { scrollbar-width: none; }
+  html::-webkit-scrollbar { display: none; }
+
+  :root {
+    --journal-blue: #1b3a6b;
+    --journal-blue-mid: #2a5298;
+    --journal-blue-light: #3a6abf;
+    --journal-teal: #0d6e6e;
+    --journal-border: #c8d0dc;
+    --journal-bg: #f4f6f9;
+    --journal-white: #ffffff;
+    --text: #1a1a1a;
+    --text-mid: #444;
+    --text-light: #6a6a6a;
+    --text-xlight: #999;
+    --accent-gold: #b07d10;
+    --open-access: #c62828;
+    --radius: 2px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);
+  }
+
+  body {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--journal-bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--journal-blue-light); text-decoration: none; }
+  a:hover { text-decoration: underline; color: var(--journal-blue); }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--journal-blue);
+    color: rgba(255,255,255,0.7);
+    font-size: 11.5px;
+    padding: 5px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-bar a { color: rgba(255,255,255,0.75); font-size: 11.5px; }
+  .top-bar a:hover { color: white; text-decoration: underline; }
+  .top-bar-links { display: flex; gap: 16px; }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--journal-white);
+    border-bottom: 2px solid var(--journal-blue);
+    padding: 12px 24px;
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .journal-wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+  }
+
+  .wordmark-publisher {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .wordmark-title {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--journal-blue);
+    line-height: 1.2;
+  }
+
+  .wordmark-subtitle {
+    font-size: 11px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-search {
+    border: 1px solid var(--journal-border);
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 13px;
+    width: 220px;
+    outline: none;
+    border-radius: var(--radius);
+  }
+
+  .header-search:focus { border-color: var(--journal-blue-light); }
+
+  .btn-login {
+    background: var(--journal-blue);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radius);
+    white-space: nowrap;
+  }
+
+  .btn-login:hover { background: var(--journal-blue-mid); }
+
+  /* ── NAV ── */
+  .main-nav {
+    background: var(--journal-white);
+    border-bottom: 1px solid var(--journal-border);
+  }
+
+  .main-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 0;
+  }
+
+  .nav-item {
+    display: block;
+    color: var(--text-mid);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 13px;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .nav-item:hover { color: var(--journal-blue); text-decoration: none; }
+  .nav-item.active { color: var(--journal-blue); border-bottom-color: var(--journal-blue); font-weight: 600; }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    max-width: 1100px;
+    margin: 12px auto 0;
+    padding: 0 24px;
+    font-size: 12px;
+    color: var(--text-light);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .breadcrumb a { color: var(--journal-blue-light); font-size: 12px; }
+  .breadcrumb .sep { color: var(--text-xlight); }
+
+  /* ── PAGE LAYOUT ── */
+  .page-layout {
+    max-width: 1100px;
+    margin: 16px auto 32px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 268px;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* ── ARTICLE MAIN ── */
+  .article-main { min-width: 0; }
+
+  /* ── ARTICLE TYPE BADGE ── */
+  .article-type-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    border: 1px solid;
+  }
+
+  .badge-article { background: #e8f0fb; color: var(--journal-blue); border-color: #b0c8f0; }
+  .badge-peer { background: #e6f4ec; color: #1a5c2a; border-color: #90c8a0; }
+  .badge-open { background: #fde8e8; color: var(--open-access); border-color: #f0b0b0; }
+
+  /* ── TITLE ── */
+  .article-title {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  /* ── AUTHORS ── */
+  .authors-block {
+    margin-bottom: 14px;
+  }
+
+  .author-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--journal-blue-light);
+    cursor: pointer;
+  }
+
+  .author-name:hover { text-decoration: underline; }
+
+  .author-affil {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  .author-sep { color: var(--text-xlight); margin: 0 6px; font-size: 12px; }
+
+  .author-correspondence {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* ── META ROW ── */
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    padding: 10px 0;
+    border-top: 1px solid var(--journal-border);
+    border-bottom: 1px solid var(--journal-border);
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  .article-meta strong { color: var(--text-mid); font-weight: 600; }
+
+  .article-meta .doi {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--journal-blue-light);
+  }
+
+  /* ── ABSTRACT ── */
+  .abstract-section {
+    background: var(--journal-white);
+    border: 1px solid var(--journal-border);
+    border-left: 4px solid var(--journal-blue);
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+
+  .abstract-section h2 {
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--journal-blue);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+  }
+
+  .abstract-section p {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 10px;
+  }
+
+  .abstract-section p:last-child { margin-bottom: 0; }
+
+  /* ── KEYWORDS ── */
+  .keywords-row {
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  .keywords-row strong { color: var(--text-mid); }
+
+  .kw-tag {
+    display: inline-block;
+    background: #eef2f8;
+    border: 1px solid #c0ceea;
+    color: var(--journal-blue);
+    font-size: 11px;
+    padding: 2px 8px;
+    margin: 2px 3px 2px 0;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .kw-tag:hover { background: #dde6f5; }
+
+  /* ── LOGIN GATE ── */
+  .login-gate {
+    background: var(--journal-white);
+    border: 1px solid var(--journal-border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .gate-preview {
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+    max-height: 110px;
+  }
+
+  .gate-preview::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--journal-white));
+    pointer-events: none;
+  }
+
+  .gate-preview p {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.75;
+    opacity: 0.5;
+  }
+
+  .gate-body {
+    border-top: 1px solid var(--journal-border);
+    padding: 22px;
+    background: #f8f9fc;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .gate-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .gate-text { flex: 1; min-width: 0; }
+
+  .gate-text h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .gate-text p {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .gate-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .btn-gate-primary {
+    background: var(--journal-blue);
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radius);
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .btn-gate-primary:hover { background: var(--journal-blue-mid); }
+
+  .btn-gate-secondary {
+    background: transparent;
+    color: var(--journal-blue);
+    border: 1px solid var(--journal-blue);
+    padding: 8px 18px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radius);
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .btn-gate-secondary:hover { background: #eef2fb; }
+
+  .gate-access-note {
+    font-size: 11px;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .institutional-logos {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .inst-logo {
+    background: var(--journal-bg);
+    border: 1px solid var(--journal-border);
+    border-radius: 2px;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+
+  /* ── METRICS ROW ── */
+  .metrics-row {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--journal-border);
+    background: var(--journal-white);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .metric {
+    flex: 1;
+    padding: 10px 14px;
+    border-right: 1px solid var(--journal-border);
+    text-align: center;
+  }
+
+  .metric:last-child { border-right: none; }
+
+  .metric-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--journal-blue);
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+
+  .metric-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar { min-width: 0; }
+
+  .sidebar-card {
+    background: var(--journal-white);
+    border: 1px solid var(--journal-border);
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+
+  .sidebar-card-header {
+    background: var(--journal-blue);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 7px 12px;
+  }
+
+  .sidebar-card-body { padding: 12px; }
+
+  .sidebar-card-body p {
+    font-size: 12px;
+    color: var(--text-mid);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-card-body p:last-child { margin-bottom: 0; }
+
+  .cite-block {
+    background: var(--journal-bg);
+    border: 1px solid var(--journal-border);
+    padding: 8px 10px;
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    user-select: all;
+  }
+
+  .btn-copy {
+    background: transparent;
+    border: 1px solid var(--journal-border);
+    color: var(--text-mid);
+    font-family: inherit;
+    font-size: 11px;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-copy:hover { background: var(--journal-bg); }
+
+  .related-article {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--journal-bg);
+  }
+
+  .related-article:last-child { border-bottom: none; }
+
+  .related-article-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--journal-blue-light);
+    line-height: 1.4;
+    margin-bottom: 2px;
+    cursor: pointer;
+  }
+
+  .related-article-title:hover { text-decoration: underline; }
+
+  .related-article-meta {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .author-card {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--journal-bg);
+  }
+
+  .author-card:last-child { border-bottom: none; }
+
+  .author-card-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--journal-blue-light);
+    cursor: pointer;
+    margin-bottom: 1px;
+  }
+
+  .author-card-name:hover { text-decoration: underline; }
+
+  .author-card-affil {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  .author-card-orcid {
+    font-size: 10px;
+    color: var(--journal-teal);
+    margin-top: 2px;
+    font-family: 'Courier New', monospace;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--journal-blue);
+    color: rgba(255,255,255,0.55);
+    font-size: 11px;
+    padding: 16px 24px;
+    margin-top: 8px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-inner a { color: rgba(255,255,255,0.55); font-size: 11px; }
+  .footer-inner a:hover { color: rgba(255,255,255,0.9); }
+  .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 820px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .header-right { width: 100%; }
+    .header-search { width: 100%; flex: 1; }
+    .top-bar-links { display: none; }
+    /* .main-nav-inner { overflow-x: auto; } */
+  }
+
+  @media (max-width: 500px) {
+    .top-bar { display: none; }
+    .main-nav { display: none; }
+    .breadcrumb { display: none; }
+    .header-right { display: none; }
+    .page-layout { padding: 0 12px; margin: 10px auto 20px; }
+    .abstract-section { padding: 14px; }
+    .gate-body { padding: 14px; }
+    .cite-block { overflow-wrap: break-word; word-break: break-word; }
+    .author-card-orcid { overflow-wrap: break-word; }
+    .footer-links { display: none; }
+    .metrics-row { flex-wrap: wrap; }
+    .metric { min-width: 40%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span>Biosystems Ethics &amp; Policy · Published by Hallsworth Academic Press</span>
+  <div class="top-bar-links">
+    <a href="#">About</a>
+    <a href="#">Editorial Board</a>
+    <a href="#">Submit</a>
+    <a href="#">Subscriptions</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="journal-wordmark" href="#">
+      <span class="wordmark-publisher">Hallsworth Academic Press</span>
+      <span class="wordmark-title">Biosystems Ethics &amp; Policy</span>
+      <span class="wordmark-subtitle">An International Journal of Applied Biological Ethics and Regulatory Science</span>
+    </a>
+    <div class="header-right">
+      <input class="header-search" type="text" placeholder="Search articles, authors, DOI…">
+      <button class="btn-login">Sign In</button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <div class="main-nav-inner">
+    <a class="nav-item" href="#">Home</a>
+    <a class="nav-item active" href="#">Articles</a>
+    <a class="nav-item" href="#">Issues</a>
+    <a class="nav-item" href="#">Topics</a>
+    <a class="nav-item" href="#">Authors</a>
+    <a class="nav-item" href="#">For Reviewers</a>
+    <a class="nav-item" href="#">Open Access</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a>
+  <span class="sep">›</span>
+  <a href="#">Articles</a>
+  <span class="sep">›</span>
+  <a href="#">Volume 11, Issue 3 (2025)</a>
+  <span class="sep">›</span>
+  <span>Engineered Organisms in Open Environments…</span>
+</div>
+
+<!-- PAGE -->
+<div class="page-layout">
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Type badges -->
+    <div class="article-type-row">
+      <span class="badge badge-article">Research Article</span>
+      <span class="badge badge-peer">Peer Reviewed</span>
+      <span class="badge badge-open">Open Access</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="article-title">Engineered Organisms in Open Environments: Regulatory Lacunae and Ethical Obligations in Commercial Bioenergy Crop Deployment</h1>
+
+    <!-- Authors -->
+    <div class="authors-block">
+      <span class="author-name">Okonkwo, A.</span><sup>1</sup>
+      <span class="author-sep">&amp;</span>
+      <span class="author-name">Lindqvist, P.</span><sup>2</sup>
+      <div class="author-affil">
+        <sup>1</sup> Department of Engineering, Manchester Metropolitan University, Manchester, UK &nbsp;·&nbsp;
+        <sup>2</sup> Department of Environmental Bioethics, Uppsala University, Uppsala, Sweden
+      </div>
+      <div class="author-correspondence">✉ Corresponding author: a.okonkwo@mmu.ac.uk</div>
+    </div>
+
+    <!-- Meta -->
+    <div class="article-meta">
+      <span><strong>Journal:</strong> Biosystems Ethics &amp; Policy</span>
+      <span><strong>Volume:</strong> 11 &nbsp;·&nbsp; <strong>Issue:</strong> 3 &nbsp;·&nbsp; <strong>Year:</strong> 2025</span>
+      <span><strong>Pages:</strong> 214–238</span>
+      <span><strong>Received:</strong> 3 Oct 2024 &nbsp;·&nbsp; <strong>Accepted:</strong> 17 Feb 2025</span>
+      <span><strong>Published online:</strong> 8 April 2025</span>
+      <span class="doi"><strong>DOI:</strong> 10.1017/bep.2025.0041</span>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics-row">
+      <div class="metric">
+        <div class="metric-value">1,847</div>
+        <div class="metric-label">HTML Views</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">412</div>
+        <div class="metric-label">PDF Downloads</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">6</div>
+        <div class="metric-label">Citations</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">23</div>
+        <div class="metric-label">Altmetric</div>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <div class="abstract-section">
+      <h2>Abstract</h2>
+      <p>The commercial deployment of genetically modified and synthetically derived crop organisms in open-field agricultural systems presents a category of regulatory challenge that existing frameworks in the United Kingdom and European Union are structurally ill-equipped to address. Where established regulatory instruments — principally the UK Genetically Modified Organisms (Contained Use) Regulations 2014 and the EU Directive 2001/18/EC on the deliberate release of GMOs — were designed to assess risks posed by broadly characterised modifications to known species, they are poorly suited to the evaluation of proprietary synthetic organisms whose full behavioural and ecological profiles are protected as commercially confidential information. This paper examines that gap in the specific context of novel bioenergy crop systems, with reference to a class of high-yield oleaginous cultivar whose deployment at commercial scale has, we argue, substantially outpaced the independent scientific assessment of its ecological risk profile.</p>
+
+      <p>We identify three principal areas of regulatory failure. First, the classification of synthetic cultivars as proprietary intellectual property materially impedes the independent research necessary to characterise risk, creating a structural asymmetry in which the organism's developer holds the only comprehensive dataset pertaining to its behaviour. Second, existing environmental risk assessment requirements do not adequately account for organisms exhibiting autonomous adaptive responses — including orientating behaviours and mechanosensory reactivity — that may produce qualitatively different ecological impacts at population scale than at the specimen level at which regulatory assessment is typically conducted. Third, the threshold conditions for mandatory environmental monitoring and incident reporting are insufficient to capture low-frequency but potentially high-consequence events involving novel organisms in conditions for which containment was not designed.</p>
+
+      <p>The ethical dimensions of this analysis are significant. We argue that the commercialisation of organisms whose full capabilities have not been independently verified constitutes a violation of the precautionary principle as understood in the Convention on Biological Diversity, and raises duties of disclosure that are not currently enforceable under applicable UK or EU law. We further contend that where a commercial operator has or reasonably should have evidence of unanticipated organism behaviour and does not disclose that evidence to regulatory bodies, that operator bears a proportionate share of moral responsibility for any consequent ecological harm — a position that has implications for the current liability frameworks governing agricultural biotechnology. We conclude with recommendations for legislative reform, including mandatory third-party access provisions for synthetic organism research and enhanced trigger conditions for statutory environmental impact review.</p>
+    </div>
+
+    <!-- Keywords -->
+    <div class="keywords-row">
+      <strong>Keywords:</strong><br>
+      <span class="kw-tag">synthetic biology regulation</span>
+      <span class="kw-tag">bioenergy crops</span>
+      <span class="kw-tag">GMO regulatory framework</span>
+      <span class="kw-tag">precautionary principle</span>
+      <span class="kw-tag">ecological risk assessment</span>
+      <span class="kw-tag">proprietary organism disclosure</span>
+      <span class="kw-tag">autonomous plant behaviour</span>
+      <span class="kw-tag">oleaginous cultivar</span>
+      <span class="kw-tag">moral responsibility</span>
+      <span class="kw-tag">UK GMO law</span>
+      <span class="kw-tag">contained use regulations</span>
+    </div>
+
+    <!-- Login Gate -->
+    <div class="login-gate">
+      <div class="gate-preview">
+        <p><strong>1. Introduction</strong></p>
+        <p>In March 2023, a paper appeared in the proceedings of the International Symposium on Industrial Biotechnology describing yield optimisation outcomes for a commercially deployed bioenergy crop designated in the literature only as "Cultivar V-7." The paper, authored by researchers affiliated with a UK-based agricultural biotechnology company, reported oleaginous yield figures significantly in excess of any previously published values for synthetic oleaginous organisms, alongside growth-rate data suggesting an unusually high tolerance for variable soil conditions and ambient temperature ranges. Buried in the methodology section, in a single paragraph subsequently removed between preprint and final publication, were notes describing…</p>
+      </div>
+      <div class="gate-body">
+        <div class="gate-icon">🔒</div>
+        <div class="gate-text">
+          <h3>Full article access required</h3>
+          <p>This article is available in full to subscribers and users with institutional access. Manchester Metropolitan University holds a current subscription to Biosystems Ethics &amp; Policy. Sign in with your MMU credentials to read the full article, including all sections, figures, supplementary materials, and references.</p>
+          <div class="institutional-logos">
+            <span style="font-size:11px;color:var(--text-light);">Access via:</span>
+            <span class="inst-logo">MMU</span>
+            <span class="inst-logo">Shibboleth</span>
+            <span class="inst-logo">OpenAthens</span>
+          </div>
+        </div>
+        <div class="gate-actions">
+          <button class="btn-gate-primary">Sign in with MMU account</button>
+          <button class="btn-gate-secondary">Institutional login</button>
+          <div class="gate-access-note">Purchase single article: £28.00 + VAT</div>
+          <div class="gate-access-note" style="margin-top:6px;"><a href="#" style="font-size:11px;">Request author copy</a> &nbsp;·&nbsp; <a href="#" style="font-size:11px;">View on PubMed</a></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Cite -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Cite This Article</div>
+      <div class="sidebar-card-body">
+        <div class="cite-block">Okonkwo, A. &amp; Lindqvist, P. (2025). Engineered Organisms in Open Environments: Regulatory Lacunae and Ethical Obligations in Commercial Bioenergy Crop Deployment. <em>Biosystems Ethics &amp; Policy</em>, 11(3), 214–238. https://doi.org/10.1017/bep.2025.0041</div>
+        <button class="btn-copy">Copy citation</button>
+        <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;">
+          <button class="btn-copy" style="flex:1;">Export RIS</button>
+          <button class="btn-copy" style="flex:1;">Export BibTeX</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Authors -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Authors</div>
+      <div class="sidebar-card-body">
+        <div class="author-card">
+          <div class="author-card-name">Okonkwo, Adaeze</div>
+          <div class="author-card-affil">Department of Engineering, Manchester Metropolitan University</div>
+          <div class="author-card-orcid">ORCID: 0000-0002-3814-7720</div>
+        </div>
+        <div class="author-card">
+          <div class="author-card-name">Lindqvist, Petra</div>
+          <div class="author-card-affil">Department of Environmental Bioethics, Uppsala University</div>
+          <div class="author-card-orcid">ORCID: 0000-0001-9042-3315</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Related Articles</div>
+      <div class="sidebar-card-body">
+        <div class="related-article">
+          <div class="related-article-title">Liability Without Disclosure: Lessons from Engineered Crop Incidents in Confined Agricultural Zones</div>
+          <div class="related-article-meta">Marchetti &amp; Yuen · <em>J. Agri. Law &amp; Ethics</em> · 2024</div>
+        </div>
+        <div class="related-article">
+          <div class="related-article-title">Beyond the Greenhouse: Ecological Risk Frameworks for Synthetic Organisms in Commercial Production</div>
+          <div class="related-article-meta">Osei-Bonsu et al. · <em>Biosystems Ethics &amp; Policy</em> · 2024</div>
+        </div>
+        <div class="related-article">
+          <div class="related-article-title">The Precautionary Principle and Novel Agricultural Organisms: Is Current UK Law Fit for Purpose?</div>
+          <div class="related-article-meta">Hargreaves · <em>Environmental Law Review</em> · 2023</div>
+        </div>
+        <div class="related-article">
+          <div class="related-article-title">Emergent Behaviour in Population-Scale Synthetic Crop Systems: A Theoretical Framework</div>
+          <div class="related-article-meta">Tamboli &amp; Okonkwo · <em>Synthetic Biology: Applications</em> · 2023</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journal info -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">About This Journal</div>
+      <div class="sidebar-card-body">
+        <p><em>Biosystems Ethics &amp; Policy</em> is a peer-reviewed international journal publishing research at the intersection of applied biological science, regulatory theory, and bioethics.</p>
+        <p><strong>Impact Factor:</strong> 2.41 (2024)<br>
+        <strong>Publisher:</strong> Hallsworth Academic Press<br>
+        <strong>ISSN:</strong> 2047-3812 (print) · 2047-3820 (online)</p>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2027 Hallsworth Academic Press · All rights reserved</span>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Settings</a>
+      <a href="#">Accessibility</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -33,7 +33,7 @@ export default function AppWindow() {
         background: app.statusBarBg ?? 'rgba(0,0,0,0.0)',
         flexShrink: 0,
       }}>
-        <StatusBar />
+        <StatusBar dark={app.statusBarDark} />
       </div>
 
       {/* App chrome header */}

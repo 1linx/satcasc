@@ -1,58 +1,41 @@
 const TABS = [
   {
     id: 0,
-    title: 'Forpes',
-    url: 'forpes.com/sites/sophiamarchetti/2027/04/03/gideon-vale-the-man-who-owns-the-sky',
-    favicon: '🔴',
+    title: 'Manchester Metropolitan University',
+    url: 'learn.mmu.ac.uk/courses/bme/year2/handbook',
+    favicon: '🎓',
     content: (
       <iframe
-        src="/forpes.html"
+        src="/university.html"
         style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
-        title="Forpes — Gideon Vale: The Man Who Owns The Sky"
+        title="Manchester Metropolitan University eLearn — BEng Biomedical Engineering Year 2 Handbook"
       />
     ),
   },
   {
     id: 1,
-    title: 'About Us',
-    url: 'www.valegroup.com/about',
-    favicon: '🌐',
+    title: 'Biosystems Ethics & Policy',
+    url: 'hallsworth.ac.uk/bep/11/3/okonkwo-lindqvist-2025',
+    favicon: '📄',
     content: (
-      <div style={{ padding: '24px 20px', background: '#f2f2f7', height: '100%' }}>
-        <div style={{ background: '#fff', borderRadius: '16px', padding: '28px 24px', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
-          <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '0 0 16px' }}>Vale Group</h2>
-          <p style={{ color: '#555', lineHeight: 1.7, margin: '0 0 14px' }}>
-            Placeholder about page for Vale Group. Add brand copy and supporting information here.
-          </p>
-          <p style={{ color: '#555', lineHeight: 1.7, margin: 0 }}>
-            This tab can link to a real page or contain further static content about the campaign.
-          </p>
-        </div>
-      </div>
+      <iframe
+        src="/paper.html"
+        style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
+        title="Biosystems Ethics & Policy — Engineered Organisms in Open Environments"
+      />
     ),
   },
   {
     id: 2,
-    title: 'Project Aphelion',
-    url: 'veristar.com/aphelion',
-    favicon: '⭐',
+    title: 'Innovation & Entrepreneurship - Coast',
+    url: 'coast.com/sites/sophiamarchetti/2027/04/03/gideon-vale-the-man-who-owns-the-sky',
+    favicon: '🌊',
     content: (
-      <div style={{ padding: '24px 20px', background: '#07090f', height: '100%', color: 'white' }}>
-        <div style={{ borderRadius: '16px', padding: '28px 24px', border: '1px solid rgba(100,160,255,0.2)', background: 'rgba(255,255,255,0.04)' }}>
-          <h2 style={{ fontSize: '22px', fontWeight: 300, letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 8px', color: 'rgba(100,180,255,0.9)' }}>
-            Project Aphelion
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', margin: '0 0 20px' }}>
-            19 June 2027
-          </p>
-          <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: '0 0 14px', fontStyle: 'italic' }}>
-            "The greatest light show in human history."
-          </p>
-          <p style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, margin: 0, fontSize: '14px' }}>
-            Add watch event details, registration links, and campaign content here.
-          </p>
-        </div>
-      </div>
+      <iframe
+        src="/forpes.html"
+        style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
+        title="Coast — Gideon Vale: The Man Who Owns The Sky"
+      />
     ),
   },
 ]
