@@ -19,7 +19,7 @@ const NOTIFICATIONS = [
     icon: '📷',
     iconBg: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
     title: 'veristar started a Live',
-    body: '#ReachTheStars — Project Aphelion is underway 🛰️',
+    body: '#ReachTheStars — Aphelion is underway 🛰️',
     time: '9:38 PM',
   },
   {
@@ -28,7 +28,7 @@ const NOTIFICATIONS = [
     icon: '📰',
     iconBg: '#d00',
     title: 'Breaking News',
-    body: 'Project Aphelion begins — thousands gather across Manchester to watch',
+    body: 'Aphelion begins — thousands gather across Manchester to watch',
     time: '9:15 PM',
   },
 ]
