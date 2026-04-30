@@ -1,6 +1,6 @@
 const POST = {
   user: 'iamtallulahrose',
-  avatarInitials: 'TR',
+  avatarInitials: 'IA',
   avatarBg: 'linear-gradient(135deg, #c9a0dc, #f0b8d0)',
   location: 'London, UK',
   time: 'June 19, 2027',
@@ -64,7 +64,7 @@ const POST = {
 }
 
 const STORIES = [
-  { user: 'shreya.chakraborty', avatarBg: 'linear-gradient(135deg, #f9a825, #e65100)', isOwn: true },
+  { user: 'shreya.chakraborty', avatarBg: 'linear-gradient(135deg, #10d358, #045a0a)', isOwn: true },
   { user: 'bexmcallister', avatarBg: '#f5a623' },
   { user: 'sojoords', avatarBg: '#e91e8c' },
   { user: 'maddieokoro', avatarBg: '#7c4dff' },
@@ -183,7 +183,7 @@ export default function Instagram() {
         <div>
           {/* Post header */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 14px' }}>
-            <Avatar initials="TR" bg="linear-gradient(135deg, #f9a825, #e65100)" size={36} ring />
+            <Avatar initials={POST.avatarInitials} bg="linear-gradient(135deg, #f9a825, #e65100)" size={36} ring />
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: '14px', fontWeight: 700 }}>{POST.user}</div>
               <div style={{ fontSize: '12px', color: '#888' }}>{POST.location}</div>
