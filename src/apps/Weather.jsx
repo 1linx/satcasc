@@ -49,7 +49,7 @@ export default function Weather() {
         border: '1px solid rgba(255,255,255,0.2)',
       }}>
         <div style={{ fontSize: '12px', fontWeight: 600, opacity: 0.7, letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '12px' }}>
-          ✨ Clear skies overnight. Perfect for the SatCasc event.
+          ✨ Clear skies overnight.
         </div>
         <div style={{ display: 'flex', gap: '16px', overflowX: 'auto' }}>
           {HOURLY.map(h => (
