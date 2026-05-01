@@ -5,7 +5,7 @@ const POSTS = [
     avatar: '🧑',
     avatarBg: '#1877f2',
     privacy: '🌐',
-    time: '2 hours ago',
+    time: '30 mins ago',
     content: 'Can\'t believe what\'s happening with the town centre tonight. Everyone needs to see this. Share if you agree!',
     imgSrc: '/images/falling_stars.png',
     reactions: { total: 84, types: ['👍', '😮', '❤️'] },
