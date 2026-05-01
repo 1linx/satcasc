@@ -79,7 +79,7 @@ const CONVERSATIONS = {
     { id: 4, text: 'Oh that\'ll be incredible, send me pictures!!', time: '19:17', mine: true },
     { id: 5, text: 'will do! have the best night with your fam 🥹', time: '19:18', mine: false },
     { id: 6, text: 'you too!! 💛', time: '19:19', mine: true },
-    { id: 7, text: 'Just got here this is SICK!!', time: '20:48', mine: false },
+    { id: 7, text: 'Just got here this is SICK!!', time: '21:02', mine: false },
   ],
   3: [
     { id: 1, text: 'has anyone actually done the Tamboli reading or are we all just watching satellites tonight', time: '11:04', mine: false },

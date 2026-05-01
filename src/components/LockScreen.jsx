@@ -15,15 +15,6 @@ const NOTIFICATIONS = [
   },
   {
     id: 2,
-    app: 'WhatsApp',
-    icon: '💬',
-    iconBg: '#25D366',
-    title: 'Niamh',
-    body: 'Just got here this is SICK!!',
-    time: '20:48 PM',
-  },
-  {
-    id: 3,
     app: 'Instagram',
     icon: '📷',
     iconBg: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
@@ -31,14 +22,24 @@ const NOTIFICATIONS = [
     body: '#ReachTheStars — De-orbit process is underway 🛰️',
     time: '21:25 PM',
   },
+
+  {
+    id: 3,
+    app: 'WhatsApp',
+    icon: '💬',
+    iconBg: '#25D366',
+    title: 'Niamh',
+    body: 'Just got here this is SICK!!',
+    time: '21:02 PM',
+  },
   {
     id: 4,
     app: 'Local News',
     icon: '📰',
     iconBg: '#d00',
     title: 'Breaking News',
-    body: 'Thousands gather across Manchester to watch once in-a-lifetime celestial event',
-    time: '21:15 PM',
+    body: 'Cascade Parties Light Up Manchester as City Prepares for Tonight\'s Sky Show',
+    time: '21:00 PM',
   },
 ]
 

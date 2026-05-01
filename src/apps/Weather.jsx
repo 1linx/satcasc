@@ -1,5 +1,5 @@
 const HOURLY = [
-  { time: '22:07', icon: '✨', temp: 21 },
+  { time: '22:00', icon: '✨', temp: 21 },
   { time: '23:00', icon: '🌙', temp: 20 },
   { time: '00:00', icon: '🌙', temp: 19 },
   { time: '01:00', icon: '🌙', temp: 18 },
