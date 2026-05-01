@@ -1,22 +1,22 @@
 const HOURLY = [
-  { time: 'Now', icon: '⛅', temp: 14 },
-  { time: '12', icon: '🌤', temp: 16 },
-  { time: '13', icon: '☀️', temp: 17 },
-  { time: '14', icon: '☀️', temp: 18 },
-  { time: '15', icon: '🌤', temp: 17 },
-  { time: '16', icon: '⛅', temp: 15 },
-  { time: '17', icon: '🌦', temp: 13 },
-  { time: '18', icon: '🌧', temp: 12 },
+  { time: '22:07', icon: '✨', temp: 21 },
+  { time: '23:00', icon: '🌙', temp: 20 },
+  { time: '00:00', icon: '🌙', temp: 19 },
+  { time: '01:00', icon: '🌙', temp: 18 },
+  { time: '02:00', icon: '🌙', temp: 17 },
+  { time: '03:00', icon: '🌙', temp: 16 },
+  { time: '04:00', icon: '🌙', temp: 16 },
+  { time: '05:00', icon: '🌅', temp: 16 },
 ]
 
 const WEEKLY = [
-  { day: 'Today', hi: 18, lo: 10, icon: '⛅' },
-  { day: 'Thu', hi: 20, lo: 11, icon: '☀️' },
-  { day: 'Fri', hi: 16, lo: 9, icon: '🌦' },
-  { day: 'Sat', hi: 14, lo: 8, icon: '🌧' },
-  { day: 'Sun', hi: 15, lo: 9, icon: '🌤' },
-  { day: 'Mon', hi: 17, lo: 10, icon: '⛅' },
-  { day: 'Tue', hi: 19, lo: 11, icon: '☀️' },
+  { day: 'Today', hi: 24, lo: 15, icon: '☀️' },
+  { day: 'Sun', hi: 23, lo: 14, icon: '🌤' },
+  { day: 'Mon', hi: 21, lo: 13, icon: '⛅' },
+  { day: 'Tue', hi: 18, lo: 12, icon: '🌦' },
+  { day: 'Wed', hi: 16, lo: 11, icon: '🌧' },
+  { day: 'Thu', hi: 18, lo: 12, icon: '🌤' },
+  { day: 'Fri', hi: 20, lo: 13, icon: '☀️' },
 ]
 
 export default function Weather() {
@@ -25,7 +25,7 @@ export default function Weather() {
       className="scrollable"
       style={{
         height: '100%',
-        background: 'linear-gradient(180deg, #1a6fad 0%, #0d3d6e 60%, #0a2a4a 100%)',
+        background: 'linear-gradient(180deg, #0a1628 0%, #0d2550 50%, #1a3a6e 100%)',
         color: 'white',
         padding: '0 0 24px',
       }}
@@ -33,9 +33,9 @@ export default function Weather() {
       {/* Hero */}
       <div style={{ textAlign: 'center', padding: '28px 20px 20px' }}>
         <div style={{ fontSize: '18px', fontWeight: 500, opacity: 0.9 }}>Manchester</div>
-        <div style={{ fontSize: '72px', fontWeight: 200, lineHeight: 1.1, margin: '4px 0' }}>14°</div>
-        <div style={{ fontSize: '18px', opacity: 0.85 }}>Partly Cloudy</div>
-        <div style={{ fontSize: '15px', opacity: 0.65, marginTop: '4px' }}>H:18° L:10°</div>
+        <div style={{ fontSize: '72px', fontWeight: 200, lineHeight: 1.1, margin: '4px 0' }}>21°</div>
+        <div style={{ fontSize: '18px', opacity: 0.85 }}>Clear</div>
+        <div style={{ fontSize: '15px', opacity: 0.65, marginTop: '4px' }}>H:24° L:15°</div>
       </div>
 
       {/* Hourly */}
@@ -49,7 +49,7 @@ export default function Weather() {
         border: '1px solid rgba(255,255,255,0.2)',
       }}>
         <div style={{ fontSize: '12px', fontWeight: 600, opacity: 0.7, letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '12px' }}>
-          ⛅ Partly cloudy conditions expected this afternoon.
+          ✨ Clear skies overnight. Perfect for the SatCasc event.
         </div>
         <div style={{ display: 'flex', gap: '16px', overflowX: 'auto' }}>
           {HOURLY.map(h => (
@@ -99,10 +99,10 @@ export default function Weather() {
         gap: '10px',
       }}>
         {[
-          { label: 'UV Index', value: '3', sub: 'Moderate' },
-          { label: 'Wind', value: '14', sub: 'km/h SW' },
-          { label: 'Humidity', value: '68%', sub: 'Feels 13°' },
-          { label: 'Visibility', value: '10', sub: 'km' },
+          { label: 'UV Index', value: '0', sub: 'None — night' },
+          { label: 'Wind', value: '6', sub: 'km/h SW' },
+          { label: 'Humidity', value: '52%', sub: 'Feels 21°' },
+          { label: 'Visibility', value: '40+', sub: 'km — excellent' },
         ].map(d => (
           <div key={d.label} style={{
             padding: '16px',

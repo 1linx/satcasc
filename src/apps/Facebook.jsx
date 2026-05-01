@@ -7,20 +7,19 @@ const POSTS = [
     privacy: '🌐',
     time: '2 hours ago',
     content: 'Can\'t believe what\'s happening with the town centre tonight. Everyone needs to see this. Share if you agree!',
-    imgBg: 'linear-gradient(135deg, #2d3436, #636e72)',
-    imgEmoji: '🏛️',
+    imgSrc: '/images/falling_stars.png',
     reactions: { total: 84, types: ['👍', '😮', '❤️'] },
     comments: 42,
     shares: 18,
   },
   {
     id: 2,
-    name: 'Local Events — Your Town',
+    name: 'Local Events — Manchester',
     avatar: '📅',
     avatarBg: '#e91e63',
     privacy: '🌐',
     time: 'Yesterday',
-    content: '📢 TONIGHT — Extraordinary Council Meeting\n📍 Civic Hall, 7:00pm\nAll welcome. Free entry.\n\nThis is YOUR chance to have a say on the future of our green initiatives. All welcome.',
+    content: '📢 TONIGHT — Extraordinary Council Meeting\n📍 Manchester Town Hall, 7:00pm\nAll welcome. Free entry.\n\nThis is YOUR chance to have a say on the future of our wider green initiatives including the proposed expansion to commerical cultivation facilities between Manchester and Prestwich.',
     reactions: { total: 231, types: ['👍', '❤️', '🎉'] },
     comments: 88,
     shares: 65,
@@ -33,8 +32,7 @@ const POSTS = [
     privacy: '👥',
     time: '2 days ago',
     content: 'Brunch at The Orchard — amazing!! Highly recommend the eggs benedict if you\'re looking for a treat!',
-    imgBg: 'linear-gradient(135deg, #f093fb, #f5576c)',
-    imgEmoji: '🍳',
+    imgSrc: '/images/eggs_benedict.png',
     reactions: { total: 57, types: ['❤️', '😋', '👍'] },
     comments: 12,
     shares: 0,
@@ -66,7 +64,10 @@ function Post({ p }) {
       </div>
 
       {/* Image */}
-      {p.imgBg && (
+      {p.imgSrc && (
+        <img src={p.imgSrc} alt="" style={{ width: '100%', display: 'block', maxHeight: '300px', objectFit: 'cover' }} />
+      )}
+      {!p.imgSrc && p.imgBg && (
         <div style={{
           width: '100%', height: '200px',
           background: p.imgBg, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -121,21 +122,7 @@ function VeristarAd() {
         <span style={{ color: '#65676b', fontSize: '20px' }}>···</span>
       </div>
 
-      {/* Ad image placeholder */}
-      <div style={{
-        width: '100%', height: '220px',
-        background: '#e8eaed',
-        display: 'flex', flexDirection: 'column',
-        alignItems: 'center', justifyContent: 'center',
-        gap: '8px',
-        borderTop: '1px solid #e4e6ea',
-        borderBottom: '1px solid #e4e6ea',
-        color: '#8a8d91',
-        fontSize: '13px',
-      }}>
-        <span style={{ fontSize: '32px' }}>🖼️</span>
-        <span>Ad image — to be supplied</span>
-      </div>
+      <img src="/images/veristar_3.png" alt="Veristar" style={{ width: '100%', display: 'block', maxHeight: '300px', objectFit: 'cover' }} />
 
       {/* Ad copy */}
       <div style={{ padding: '12px 14px 4px', fontSize: '15px', color: '#1c1e21', lineHeight: 1.5 }}>
@@ -179,8 +166,9 @@ export default function Facebook() {
 
       <div className="scrollable" style={{ flex: 1 }}>
         <Post key={POSTS[0].id} p={POSTS[0]} />
+        <Post key={POSTS[1].id} p={POSTS[1]} />
         <VeristarAd />
-        {POSTS.slice(1).map(p => <Post key={p.id} p={p} />)}
+        {POSTS.slice(2).map(p => <Post key={p.id} p={p} />)}
       </div>
 
       {/* Bottom nav */}

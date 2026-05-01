@@ -5,7 +5,7 @@ import Weather from './Weather'
 import LinkedIn from './LinkedIn'
 import Facebook from './Facebook'
 import LocalNews from './LocalNews'
-import Natter from './Natter'
+import Reddit from './Reddit'
 
 export const APPS = [
   {
@@ -82,16 +82,16 @@ export const APPS = [
     component: Facebook,
   },
   {
-    id: 'natter',
-    name: 'Natter',
-    emoji: '📣',
+    id: 'reddit',
+    name: 'Reddit',
+    emoji: '👽',
     iconBg: 'linear-gradient(135deg, #ff4500, #cc3300)',
     screenBg: '#dae0e6',
     headerBg: 'rgba(218,224,230,0.95)',
     statusBarDark: true,
     accentColor: '#ff4500',
     titleColor: '#000',
-    component: Natter,
+    component: Reddit,
   },
   {
     id: 'weather',

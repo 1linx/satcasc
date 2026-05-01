@@ -52,6 +52,73 @@ const ARTICLES = [
   },
 ]
 
+function VeristarAdvertorial() {
+  return (
+    <div style={{
+      borderBottom: '1px solid #eee',
+      background: '#f0f4ff',
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {/* Sponsored label */}
+      <div style={{
+        padding: '6px 16px 0',
+        fontSize: '10px',
+        fontWeight: 700,
+        letterSpacing: '0.08em',
+        color: '#999',
+        textTransform: 'uppercase',
+      }}>
+        Sponsored Content
+      </div>
+
+      {/* Visual banner */}
+      <div style={{
+        margin: '8px 16px 0',
+        borderRadius: '10px',
+        overflow: 'hidden',
+        background: 'linear-gradient(135deg, #0a0a2e 0%, #0d1f5c 50%, #1a3a8a 100%)',
+        padding: '20px 18px',
+        position: 'relative',
+      }}>
+        {/* Star-scatter decoration */}
+        <div style={{
+          position: 'absolute', inset: 0, opacity: 0.4,
+          backgroundImage: 'radial-gradient(1px 1px at 10% 20%, white 0%, transparent 100%), radial-gradient(1px 1px at 30% 60%, white 0%, transparent 100%), radial-gradient(1.5px 1.5px at 55% 15%, white 0%, transparent 100%), radial-gradient(1px 1px at 75% 40%, white 0%, transparent 100%), radial-gradient(1px 1px at 88% 70%, white 0%, transparent 100%), radial-gradient(1px 1px at 20% 80%, white 0%, transparent 100%), radial-gradient(1.5px 1.5px at 65% 75%, white 0%, transparent 100%)',
+        }} />
+        <div style={{ position: 'relative' }}>
+          <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: 'rgba(255,255,255,0.6)', marginBottom: '6px' }}>
+            VERISTAR SATELLITE BROADBAND
+          </div>
+          <div style={{ fontSize: '22px', fontWeight: 800, color: 'white', lineHeight: 1.2, marginBottom: '4px' }}>
+            Faster than light.<br />Starting at £14/mo.
+          </div>
+          <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.65)', marginTop: '8px', lineHeight: 1.5 }}>
+            Low Earth Orbit speeds. No phone line needed.
+            No engineer visit. Just point, connect, and go — anywhere in the UK.
+          </div>
+          <div style={{
+            display: 'inline-block',
+            marginTop: '14px',
+            background: 'white',
+            color: '#0a0a2e',
+            borderRadius: '20px',
+            padding: '7px 18px',
+            fontSize: '13px',
+            fontWeight: 700,
+          }}>
+            Get a free quote →
+          </div>
+        </div>
+      </div>
+
+      <div style={{ padding: '8px 16px 12px', fontSize: '11px', color: '#aaa', lineHeight: 1.4 }}>
+        Veristar Ltd. 24-month min. term. £14/mo for 30Mbps Lite plan. Fair usage policy applies. A Vale Group company.
+      </div>
+    </div>
+  )
+}
+
 function Article({ a }) {
   return (
     <div style={{
@@ -134,7 +201,9 @@ export default function LocalNews() {
       </div>
 
       <div className="scrollable" style={{ flex: 1 }}>
-        {ARTICLES.map(a => <Article key={a.id} a={a} />)}
+        {ARTICLES.slice(0, 2).map(a => <Article key={a.id} a={a} />)}
+        <VeristarAdvertorial />
+        {ARTICLES.slice(2).map(a => <Article key={a.id} a={a} />)}
       </div>
     </div>
   )

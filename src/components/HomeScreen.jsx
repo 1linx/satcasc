@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import StatusBar from './StatusBar'
 import AppIcon from './AppIcon'
@@ -5,10 +6,16 @@ import { APPS } from '../apps/registry'
 
 const DOCK_APP_IDS = ['browser', 'whatsapp', 'instagram', 'weather']
 const dockApps = DOCK_APP_IDS.map(id => APPS.find(a => a.id === id)).filter(Boolean)
-const gridApps = APPS.filter(a => !DOCK_APP_IDS.includes(a.id))
 const allGridApps = [...APPS]
 
 export default function HomeScreen() {
+  const [narrow, setNarrow] = useState(() => window.innerWidth < 550)
+
+  useEffect(() => {
+    const handler = () => setNarrow(window.innerWidth < 550)
+    window.addEventListener('resize', handler)
+    return () => window.removeEventListener('resize', handler)
+  }, [])
   return (
     <motion.div
       key="homescreen"
@@ -50,7 +57,7 @@ export default function HomeScreen() {
         flex: 1,
         padding: '16px 28px 12px',
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
+        gridTemplateColumns: narrow ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)',
         gridAutoRows: '108px',
         alignContent: 'start',
         gap: '0',
@@ -83,7 +90,7 @@ export default function HomeScreen() {
         justifyContent: 'space-around',
         alignItems: 'center',
       }}>
-        {dockApps.map(app => (
+        {(narrow ? dockApps.slice(0, 3) : dockApps).map(app => (
           <AppIcon key={app.id} app={app} />
         ))}
       </div>

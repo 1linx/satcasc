@@ -86,7 +86,7 @@ const CONVERSATIONS = {
     { id: 2, text: 'watching satellites obviously 🛰️', time: '11:06', mine: false },
     { id: 3, text: 'both. multitasking 😌', time: '11:09', mine: true },
     { id: 4, text: 'Niamh said she\'s watching from the Northern Quarter with a load of people', time: '11:14', mine: false },
-    { id: 5, text: 'Dr O is DEFINITELY going to reference this in BME2003. I can already feel it', time: '11:31', mine: false },
+    { id: 5, text: 'Dr T is DEFINITELY going to reference this in BME2003. I can already feel it', time: '11:31', mine: false },
     { id: 6, text: '💀 "as we observed during last year\'s cascade event"', time: '11:33', mine: true },
     { id: 7, text: 'Anyone else completely unable to focus rn 😂 #SatCasc', time: '18:47', mine: false },
   ],
