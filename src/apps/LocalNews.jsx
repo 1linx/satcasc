@@ -2,12 +2,12 @@ const ARTICLES = [
   {
     id: 1,
     category: 'BREAKING',
-    headline: 'Council Votes Tonight on Controversial Town Centre Redevelopment',
-    summary: 'Residents are urged to attend tonight\'s extraordinary council meeting as members vote on the £45m redevelopment plan for the town centre. Protesters gathered outside the civic hall this morning.',
+    headline: 'Cascade Parties Light Up Manchester as City Prepares for Tonight\'s Sky Show',
+    summary: 'Bars, parks and rooftops across Greater Manchester are hosting sell-out Cascade parties ahead of tonight\'s \'deorbiting\' event. Piccadilly Gardens and Castlefield Bowl are expected to draw tens of thousands of revellers.',
     author: 'Jane Hartley',
     time: '1 hour ago',
-    imgEmoji: '🏛️',
-    imgBg: 'linear-gradient(135deg, #2d3436, #636e72)',
+    imgEmoji: '🎉',
+    imgBg: 'linear-gradient(135deg, #1a1a4e, #4a2080)',
     hot: true,
   },
   {
@@ -23,7 +23,7 @@ const ARTICLES = [
   {
     id: 3,
     category: 'SPORT',
-    headline: 'Town FC Secure Play-Off Place With Late Winner',
+    headline: 'Rusholme FC Secure Play-Off Place With Late Winner',
     summary: 'A stoppage-time goal from substitute Danny Brooks secured a dramatic 2-1 victory and clinched a top-six finish for Town FC.',
     author: 'Marcus Reid',
     time: '5 hours ago',
@@ -32,13 +32,13 @@ const ARTICLES = [
   },
   {
     id: 4,
-    category: 'COMMUNITY',
-    headline: 'Volunteers Plant 500 Trees in Annual Green Day Event',
-    summary: 'Over 200 volunteers turned out for the annual Green Day initiative, planting native trees across three local parks and nature reserves.',
+    category: 'BUSINESS',
+    headline: 'Verdant Agritech Submits Plans for Major Salford Site Expansion',
+    summary: 'The biotech firm has filed a planning application to nearly double its Salford facility, citing growing demand for VeraFuel organic cultivars. Local residents\' groups have raised concerns over traffic and odour.',
     author: 'Amy Clarke',
     time: 'Yesterday',
-    imgEmoji: '🌳',
-    imgBg: 'linear-gradient(135deg, #55efc4, #00b894)',
+    imgEmoji: '🌿',
+    imgBg: 'linear-gradient(135deg, #1e5c2e, #4a9e5c)',
   },
   {
     id: 5,
@@ -126,7 +126,7 @@ export default function LocalNews() {
         flexShrink: 0,
       }}>
         <div style={{ fontSize: '20px', fontWeight: 800, color: 'white', letterSpacing: '-0.5px' }}>
-          The Town Gazette
+          Manchester Gazette
         </div>
         <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.75)', marginTop: '2px' }}>
           Your local news, updated hourly

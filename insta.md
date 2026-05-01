@@ -10,7 +10,7 @@ cannot wait to see everyone's looks on the night — drop yours in the comments 
 what are YOU wearing for the light show?? 👇👇
 
 Hashtags:
-#Aphelion #ProjectAphelion #SatCasc #June21 #Veristar #VeristarLive #ReachTheStars #LightShow #NightSky #OutfitInspo #GRWM #GettingReady #CelestialVibes #SpaceFashion #Manchester #MCR #MancsOfInstagram #WhatImWearing #SummerSolstice #PartyTime #GirlsNight #RooftopVibes
+#ReachTheStars #StarsWithTheStars #Aphelion #SatCasc #Veristar #VeristarLive #LightShow #NightSky #OutfitInspo #GRWM #GettingReady #CelestialVibes #SpaceFashion #Manchester #MCR #MancsOfInstagram #WhatImWearing #SummerSolstice #PartyTime #GirlsNight #RooftopVibes
 
 Comments to include:
 

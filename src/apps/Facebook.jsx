@@ -1,7 +1,7 @@
 const POSTS = [
   {
     id: 1,
-    name: 'Jordan Matthews',
+    name: 'Jack Hethersett',
     avatar: '🧑',
     avatarBg: '#1877f2',
     privacy: '🌐',
@@ -20,19 +20,19 @@ const POSTS = [
     avatarBg: '#e91e63',
     privacy: '🌐',
     time: 'Yesterday',
-    content: '📢 TONIGHT — Extraordinary Council Meeting\n📍 Civic Hall, 7:00pm\nAll welcome. Free entry.\n\nThis is YOUR chance to have a say on the future of our town centre. See you there! 👇',
+    content: '📢 TONIGHT — Extraordinary Council Meeting\n📍 Civic Hall, 7:00pm\nAll welcome. Free entry.\n\nThis is YOUR chance to have a say on the future of our green initiatives. All welcome.',
     reactions: { total: 231, types: ['👍', '❤️', '🎉'] },
     comments: 88,
     shares: 65,
   },
   {
     id: 3,
-    name: 'Sarah Jane',
-    avatar: '👩',
+    name: 'Jordan Spencer',
+    avatar: '🧑🏻',
     avatarBg: '#e91e63',
     privacy: '👥',
     time: '2 days ago',
-    content: 'Sunday brunch at The Orchard — absolutely delicious. Highly recommend the eggs benedict if you\'re looking for a treat! 🍳☕',
+    content: 'Brunch at The Orchard — amazing!! Highly recommend the eggs benedict if you\'re looking for a treat!',
     imgBg: 'linear-gradient(135deg, #f093fb, #f5576c)',
     imgEmoji: '🍳',
     reactions: { total: 57, types: ['❤️', '😋', '👍'] },
@@ -102,6 +102,60 @@ function Post({ p }) {
   )
 }
 
+function VeristarAd() {
+  return (
+    <div style={{ background: '#fff', marginBottom: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+      {/* Sponsored header */}
+      <div style={{ display: 'flex', gap: '10px', padding: '12px 14px', alignItems: 'flex-start' }}>
+        <div style={{
+          width: '42px', height: '42px', borderRadius: '8px', flexShrink: 0,
+          background: '#0a0a2e', display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontSize: '20px',
+        }}>
+          🛰️
+        </div>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontWeight: 600, fontSize: '14px', color: '#1c1e21' }}>Veristar</div>
+          <div style={{ fontSize: '12px', color: '#65676b' }}>Sponsored · 🌐</div>
+        </div>
+        <span style={{ color: '#65676b', fontSize: '20px' }}>···</span>
+      </div>
+
+      {/* Ad image placeholder */}
+      <div style={{
+        width: '100%', height: '220px',
+        background: '#e8eaed',
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center',
+        gap: '8px',
+        borderTop: '1px solid #e4e6ea',
+        borderBottom: '1px solid #e4e6ea',
+        color: '#8a8d91',
+        fontSize: '13px',
+      }}>
+        <span style={{ fontSize: '32px' }}>🖼️</span>
+        <span>Ad image — to be supplied</span>
+      </div>
+
+      {/* Ad copy */}
+      <div style={{ padding: '12px 14px 4px', fontSize: '15px', color: '#1c1e21', lineHeight: 1.5 }}>
+        <div style={{ fontWeight: 700, marginBottom: '2px' }}>Tonight, history looks up. ✨</div>
+        <div style={{ fontSize: '13px', color: '#65676b' }}>veristar.com</div>
+      </div>
+
+      {/* CTA */}
+      <div style={{ padding: '10px 14px 14px' }}>
+        <div style={{
+          background: '#1877f2', color: '#fff', borderRadius: '6px',
+          padding: '8px 14px', fontSize: '14px', fontWeight: 600, textAlign: 'center',
+        }}>
+          Learn More
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Facebook() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column', background: '#f0f2f5' }}>
@@ -124,7 +178,9 @@ export default function Facebook() {
       </div>
 
       <div className="scrollable" style={{ flex: 1 }}>
-        {POSTS.map(p => <Post key={p.id} p={p} />)}
+        <Post key={POSTS[0].id} p={POSTS[0]} />
+        <VeristarAd />
+        {POSTS.slice(1).map(p => <Post key={p.id} p={p} />)}
       </div>
 
       {/* Bottom nav */}

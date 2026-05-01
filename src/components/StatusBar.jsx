@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 
 function BatteryIcon({ pct = 72, dark = false }) {
   const fg = dark ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)'
@@ -45,14 +44,7 @@ function SignalIcon() {
 }
 
 export default function StatusBar({ transparent = false, dark = false }) {
-  const [time, setTime] = useState(() => new Date())
-
-  useEffect(() => {
-    const t = setInterval(() => setTime(new Date()), 1000)
-    return () => clearInterval(t)
-  }, [])
-
-  const timeStr = time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+  const timeStr = '22:07'
 
   return (
     <div style={{
