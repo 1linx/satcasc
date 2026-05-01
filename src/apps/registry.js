@@ -5,6 +5,7 @@ import Weather from './Weather'
 import LinkedIn from './LinkedIn'
 import Facebook from './Facebook'
 import LocalNews from './LocalNews'
+import Natter from './Natter'
 
 export const APPS = [
   {
@@ -79,6 +80,18 @@ export const APPS = [
     accentColor: '#1877F2',
     titleColor: '#000',
     component: Facebook,
+  },
+  {
+    id: 'natter',
+    name: 'Natter',
+    emoji: '📣',
+    iconBg: 'linear-gradient(135deg, #ff4500, #cc3300)',
+    screenBg: '#dae0e6',
+    headerBg: 'rgba(218,224,230,0.95)',
+    statusBarDark: true,
+    accentColor: '#ff4500',
+    titleColor: '#000',
+    component: Natter,
   },
   {
     id: 'weather',
