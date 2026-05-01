@@ -29,7 +29,7 @@ const NOTIFICATIONS = [
     icon: '💬',
     iconBg: '#25D366',
     title: 'Niamh',
-    body: 'Just got here this is SICK!!',
+    body: '📷 Photo',
     time: '21:02 PM',
   },
   {

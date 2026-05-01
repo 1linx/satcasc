@@ -79,7 +79,8 @@ const CONVERSATIONS = {
     { id: 4, text: 'Oh that\'ll be incredible, send me pictures!!', time: '19:17', mine: true },
     { id: 5, text: 'will do! have the best night with your fam 🥹', time: '19:18', mine: false },
     { id: 6, text: 'you too!! 💛', time: '19:19', mine: true },
-    { id: 7, text: 'Just got here this is SICK!!', time: '21:02', mine: false },
+    { id: 7, text: 'Just got here this is SICK!!', time: '20:48', mine: false },
+    { id: 8, img: '/images/niamh.png', time: '21:02', mine: false },
   ],
   3: [
     { id: 1, text: 'has anyone actually done the Tamboli reading or are we all just watching satellites tonight', time: '11:04', mine: false },
@@ -204,21 +205,40 @@ function ConversationView({ chat, messages, onBack }) {
             justifyContent: msg.mine ? 'flex-end' : 'flex-start',
             marginBottom: '6px',
           }}>
-            <div style={{
-              maxWidth: '72%',
-              padding: '8px 12px',
-              borderRadius: msg.mine ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
-              background: msg.mine ? '#dcf8c6' : '#fff',
-              boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
-              fontSize: '14px',
-              lineHeight: 1.5,
-              color: '#111',
-            }}>
-              {msg.text}
-              <div style={{ textAlign: 'right', fontSize: '11px', color: '#888', marginTop: '2px' }}>
-                {msg.time}
+            {msg.img ? (
+              <div style={{
+                maxWidth: '72%',
+                borderRadius: msg.mine ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
+                overflow: 'hidden',
+                boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                position: 'relative',
+              }}>
+                <img src={msg.img} alt="" style={{ display: 'block', width: '100%', maxWidth: '220px' }} />
+                <div style={{
+                  position: 'absolute', bottom: '6px', right: '8px',
+                  fontSize: '11px', color: 'rgba(255,255,255,0.9)',
+                  textShadow: '0 1px 2px rgba(0,0,0,0.5)',
+                }}>
+                  {msg.time}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div style={{
+                maxWidth: '72%',
+                padding: '8px 12px',
+                borderRadius: msg.mine ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
+                background: msg.mine ? '#dcf8c6' : '#fff',
+                boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                fontSize: '14px',
+                lineHeight: 1.5,
+                color: '#111',
+              }}>
+                {msg.text}
+                <div style={{ textAlign: 'right', fontSize: '11px', color: '#888', marginTop: '2px' }}>
+                  {msg.time}
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
