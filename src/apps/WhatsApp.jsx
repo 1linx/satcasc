@@ -64,7 +64,7 @@ const CONVERSATIONS = {
     { id: 1, text: 'Heyyyy where you watching tonight??? 🌌', time: '17:22', mine: false },
     { id: 2, text: 'At home, with my parents 😭 where are you?', time: '17:23', mine: true },
     { id: 3, text: 'Still at Neemy\'s, heading out soon. What time does it actually start?', time: '17:23', mine: false },
-    { id: 4, text: 'Peak is meant to be around 9:30 but there will be visible buildup apparently, look up #SatCasc it\'s insane how many satellites there actually are', time: '17:26', mine: true },
+    { id: 4, text: 'Peak is meant to be around 9:45 but there will be visible buildup apparently, look up #SatCasc it\'s insane how many satellites there actually are', time: '17:26', mine: true },
     { id: 5, text: 'You missing out on a party here girl literally EVERYONE is out', time: '17:38', mine: false },
     { id: 6, text: 'Ugh stfu bitch I am so jealous', time: '17:40', mine: true },
     { id: 7, text: 'lolololol miss you ❤️❤️❤️', time: '20:41', mine: false },
