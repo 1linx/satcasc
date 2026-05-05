@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useDevice } from '../context/DeviceContext'
 import StatusBar from './StatusBar'
@@ -83,14 +83,7 @@ function NotificationBanner({ n, index }) {
 
 export default function LockScreen() {
   const { unlock } = useDevice()
-  const [time, setTime] = useState(() => new Date())
-
-  useEffect(() => {
-    const t = setInterval(() => setTime(new Date()), 1000)
-    return () => clearInterval(t)
-  }, [])
-
-  const timeStr = time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+  const timeStr = '22:07'
   const dateStr = 'Saturday, 19 June'
 
   return (
